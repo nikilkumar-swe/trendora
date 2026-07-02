@@ -4,6 +4,7 @@ import com.project.trendora.dto.OrderRequest;
 import com.project.trendora.dto.OrderResponse;
 import com.project.trendora.dto.ViewOrderResponse;
 import com.project.trendora.service.Impl.OrderServiceImpl;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +19,7 @@ public class OrderController {
     private final OrderServiceImpl orderService;
 
     @PostMapping("/place/{userId}")
-    public ResponseEntity<OrderResponse> placeOrder(@RequestBody OrderRequest orderRequest){
+    public ResponseEntity<OrderResponse> placeOrder(@Valid @RequestBody OrderRequest orderRequest){
         return ResponseEntity.ok(orderService.placeOrder(orderRequest));
     }
     //get all orders of a user

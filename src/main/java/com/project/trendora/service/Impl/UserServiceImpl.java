@@ -1,4 +1,5 @@
 package com.project.trendora.service.Impl;
+
 import com.project.trendora.Repository.UserRepository;
 import com.project.trendora.dto.LoginRequest;
 import com.project.trendora.dto.UserRegisterRequest;
@@ -62,7 +63,6 @@ public class UserServiceImpl implements UserService {
             Authentication authentication= authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(request.getUsername(),request.getPassword())
             );
-
             return "User logged In successfully";
         }catch(RuntimeException ex){
             return ex.getMessage();
