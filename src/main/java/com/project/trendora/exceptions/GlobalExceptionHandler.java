@@ -27,6 +27,13 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(ex.getMessage());
     }
 
+    @ExceptionHandler(UserNotFound.class)
+    public ResponseEntity<?> handleUserNotFoundException(UserNotFound obj){
+        log.warn("user not found {}",obj.getMessage());
+        return ResponseEntity.badRequest().body(obj.getMessage());
+    }
+
+
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<?> handleGlobalRuntimeException(RuntimeException ex){
         log.error("Unexpected exception occurred", ex);

@@ -4,8 +4,11 @@ import com.project.trendora.Repository.UserRepository;
 import com.project.trendora.dto.LoginRequest;
 import com.project.trendora.dto.UserRegisterRequest;
 import com.project.trendora.dto.UserRegisterResponse;
+import com.project.trendora.dto.ViewProfile;
 import com.project.trendora.exceptions.UserAlreadyExists;
+import com.project.trendora.exceptions.UserNotFound;
 import com.project.trendora.models.User;
+import com.project.trendora.service.EmailService;
 import com.project.trendora.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -16,14 +19,16 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.security.Principal;
+
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private static final Logger logger= LoggerFactory.getLogger(UserServiceImpl.class);
     private final PasswordEncoder passwordEncoder;
-
     private final AuthenticationManager authenticationManager;
+    private final EmailService emailService;
 
     @Override
     public UserRegisterResponse register(UserRegisterRequest userRequest) {
@@ -41,6 +46,11 @@ public class UserServiceImpl implements UserService {
         user.setRoles("USER");
 
         User savedUser=userRepository.save(user);
+        emailService.sendMail(
+                savedUser.getEmail(),
+                "Welcome to Trendora",
+                "Your account has been created successfully."
+        );
         logger.info("User registered successfully with id {}",savedUser.getUserId());
         return mapToResponse(savedUser);
     }
@@ -67,8 +77,20 @@ public class UserServiceImpl implements UserService {
         }catch(RuntimeException ex){
             return ex.getMessage();
         }
-
     }
 
-
+    //view profile
+    public ViewProfile viewProfile(Principal principal){
+        //extract the user
+        User user=userRepository.findByUsername(principal.getName());
+        if(user==null){
+            throw new UserNotFound("User not found");
+        }
+        ViewProfile response=new ViewProfile();
+        response.setEmail(user.getEmail());
+        response.setFirstName(user.getFirstName());
+        response.setLastName(user.getLastName());
+        response.setUsername(user.getUsername());
+        return response;
+    }
 }
