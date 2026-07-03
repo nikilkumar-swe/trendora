@@ -1,10 +1,7 @@
 package com.project.trendora.dto;
 
 import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Positive;
-import jakarta.validation.constraints.PositiveOrZero;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import lombok.Data;
 
 @Data
@@ -15,7 +12,7 @@ public class ProductRequest {
     @Column(length = 220)
     @NotBlank(message = "description field cannot be empty")
     private String description;
-    @NotBlank(message = "price field cannot be empty")
+    @NotNull(message = "price field cannot be empty")
     @Positive(message = "price should be greater than 0")
     private Double price;
     @PositiveOrZero

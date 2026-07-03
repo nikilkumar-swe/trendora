@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,10 +48,20 @@ public class ProductController {
             @ApiResponse(responseCode = "200"),
             @ApiResponse(responseCode = "404",description = "Products not found")
     })
+
     @GetMapping("/get/products")
-    public ResponseEntity<List<ProductResponse>> getAllProducts(){
-        return ResponseEntity.ok(productService.getAllProducts());
+    public ResponseEntity<Page<ProductResponse>> getAllProducts(@RequestParam(defaultValue = "0") int page,
+                                                                @RequestParam(defaultValue = "10") int size,
+                                                                @RequestParam(defaultValue = "productId") String sortBy,
+                                                                @RequestParam(defaultValue = "asc") String sortDir
+                                                                ){
+
+        return ResponseEntity.ok(
+                productService.getAllProducts(page,size,sortBy,sortDir)
+        );
+
     }
+
     @Operation(summary = "Delete product by ID")
     @ApiResponses({
             @ApiResponse(responseCode = "200",description = "Product deleted successfully "),

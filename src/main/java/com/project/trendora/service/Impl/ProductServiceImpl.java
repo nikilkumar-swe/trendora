@@ -10,9 +10,12 @@ import com.project.trendora.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -55,11 +58,15 @@ public class ProductServiceImpl implements ProductService {
     }
     //get all products
     @Override
-    public List<ProductResponse> getAllProducts(){
-        return productRepository.findAll()
-                .stream()
-                .map(this::mapToResponse)
-                .toList();
+    public Page<ProductResponse> getAllProducts(int page,int size,String sortBy,String sortDir){
+
+        Sort sort=sortDir.equalsIgnoreCase("desc")
+                ?Sort.by(sortBy).descending()
+                :Sort.by(sortBy).ascending();
+
+        Pageable pageable= PageRequest.of(page,size,sort);
+        Page<Product> products=productRepository.findAll(pageable);
+        return products.map(this::mapToResponse);
     }
 
     //delete a product
