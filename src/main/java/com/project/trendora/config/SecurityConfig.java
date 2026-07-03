@@ -23,6 +23,9 @@ public class SecurityConfig {
                                 ,"/api/user/login",
                                         "/swagger-ui/**",
                                         "/v3/api-docs/**").permitAll()
+                                .requestMatchers("/api/product/add",
+                                        "/api/product/delete/**",
+                                        "/api/product/update/**").hasRole("ADMIN")
                                 .anyRequest()
                                 .authenticated()
                 )
