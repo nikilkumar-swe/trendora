@@ -8,6 +8,7 @@ import com.project.trendora.dto.ViewProfile;
 import com.project.trendora.exceptions.UserAlreadyExists;
 import com.project.trendora.exceptions.UserNotFound;
 import com.project.trendora.models.User;
+import com.project.trendora.security.JwtUtils;
 import com.project.trendora.service.EmailService;
 import com.project.trendora.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -16,10 +17,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.security.Principal;
+import java.util.HashMap;
 
 @Service
 @RequiredArgsConstructor
@@ -29,6 +33,7 @@ public class UserServiceImpl implements UserService {
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
     private final EmailService emailService;
+    private final JwtUtils jwtUtils;
 
     @Override
     public UserRegisterResponse register(UserRegisterRequest userRequest) {
@@ -73,9 +78,11 @@ public class UserServiceImpl implements UserService {
             Authentication authentication= authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(request.getUsername(),request.getPassword())
             );
-            return "User logged In successfully";
-        }catch(RuntimeException ex){
-            return ex.getMessage();
+            UserDetails userDetails=(UserDetails) authentication.getPrincipal();
+            return jwtUtils.generateToken(new HashMap<>(),userDetails);
+
+        }catch(AuthenticationException ex){
+            return "Invalid username and password";
         }
     }
 
