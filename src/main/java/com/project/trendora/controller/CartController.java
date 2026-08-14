@@ -2,6 +2,7 @@ package com.project.trendora.controller;
 
 import com.project.trendora.dto.AddToCartRequest;
 import com.project.trendora.dto.RemoveFromCartRequest;
+import com.project.trendora.dto.ViewCartResponse;
 import com.project.trendora.service.Impl.CartServiceImpl;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -24,4 +25,9 @@ public class CartController {
     public ResponseEntity<String> removeFromCart(@Valid @RequestBody RemoveFromCartRequest request){
         return ResponseEntity.ok(cartService.removeFromCart(request));
     }
+    @GetMapping("/view/{userId}")
+    public ResponseEntity<ViewCartResponse> viewCart(@PathVariable Long userId){
+        return ResponseEntity.ok(cartService.viewCart(userId));
+    }
+
 }

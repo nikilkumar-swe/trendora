@@ -5,7 +5,9 @@ import com.project.trendora.Repository.CartRepository;
 import com.project.trendora.Repository.ProductRepository;
 import com.project.trendora.Repository.UserRepository;
 import com.project.trendora.dto.AddToCartRequest;
+import com.project.trendora.dto.CartItemResponse;
 import com.project.trendora.dto.RemoveFromCartRequest;
+import com.project.trendora.dto.ViewCartResponse;
 import com.project.trendora.models.Cart;
 import com.project.trendora.models.CartItems;
 import com.project.trendora.models.Product;
@@ -16,6 +18,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -152,4 +156,76 @@ public class CartServiceImpl implements CartService {
         log.info("Item removed successfully for user {}", user.getUserId());
         return "Item removed successfully";
     }
+
+    @Override
+    public ViewCartResponse viewCart(Long userId) {
+
+        // 1. Check user existence
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        // 2. Find user's cart
+        Cart cart = cartRepository.findByUser(user);
+
+        if (cart == null) {
+            throw new RuntimeException("Cart not found");
+        }
+
+        // 3. Get cart items
+        List<CartItems> cartItems = cart.getCartItems();
+
+        // 4. Create response
+        ViewCartResponse response = new ViewCartResponse();
+
+        response.setCartId(cart.getCartId());
+        response.setUserId(user.getUserId());
+
+        // 5. Create list for DTOs
+        List<CartItemResponse> itemResponses = new ArrayList<>();
+
+        int totalItems = 0;
+        double totalAmount = 0;
+
+        // 6. Convert CartItems -> CartItemResponse
+        for (CartItems cartItem : cartItems) {
+
+            CartItemResponse itemResponse = new CartItemResponse();
+
+            itemResponse.setCartItemId(cartItem.getId());
+
+            itemResponse.setProductId(
+                    cartItem.getProduct().getProductId()
+            );
+
+            itemResponse.setProductName(
+                    cartItem.getProduct().getName()
+            );
+
+            itemResponse.setPrice(
+                    cartItem.getProduct().getPrice()
+            );
+
+            itemResponse.setQuantity(
+                    cartItem.getQuantity()
+            );
+
+            itemResponse.setSubtotal(
+                    cartItem.getSubtotal()
+            );
+
+            itemResponses.add(itemResponse);
+
+            // calculate totals
+            totalItems += cartItem.getQuantity();
+            totalAmount += cartItem.getSubtotal();
+        }
+
+        // 7. Set final values
+        response.setItems(itemResponses);
+        response.setTotalItems(totalItems);
+        response.setTotalAmount(totalAmount);
+
+        return response;
+    }
+
 }
