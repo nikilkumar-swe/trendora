@@ -1,22 +1,22 @@
-2026-08-14T19:13:07.885+05:30  INFO 3782 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Starting TrendoraApplication using Java 21.0.11 with PID 3782 (/home/nikhilrana07/Documents/Boot_Projects/trendora/target/classes started by nikhilrana07 in /home/nikhilrana07/Documents/Boot_Projects/trendora)
-2026-08-14T19:13:07.894+05:30 DEBUG 3782 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Running with Spring Boot v3.5.15, Spring v6.2.19
-2026-08-14T19:13:07.895+05:30  INFO 3782 --- [trendora] [main] c.project.trendora.TrendoraApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-08-14T19:13:09.083+05:30  INFO 3782 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-14T19:13:09.161+05:30  INFO 3782 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
-2026-08-14T19:13:09.770+05:30  INFO 3782 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-08-14T19:13:09.788+05:30  INFO 3782 --- [trendora] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-08-14T19:13:09.788+05:30  INFO 3782 --- [trendora] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
-2026-08-14T19:13:09.835+05:30  INFO 3782 --- [trendora] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-08-14T19:13:09.836+05:30  INFO 3782 --- [trendora] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1880 ms
-2026-08-14T19:13:10.038+05:30  INFO 3782 --- [trendora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-08-14T19:13:10.100+05:30  INFO 3782 --- [trendora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
-2026-08-14T19:13:10.134+05:30  INFO 3782 --- [trendora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-08-14T19:13:10.532+05:30  INFO 3782 --- [trendora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-14T19:13:10.593+05:30  INFO 3782 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-08-14T19:13:11.417+05:30  INFO 3782 --- [trendora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78bd02c8
-2026-08-14T19:13:11.420+05:30  INFO 3782 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-08-14T19:13:11.502+05:30  WARN 3782 --- [trendora] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-08-14T19:13:11.543+05:30  INFO 3782 --- [trendora] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-08-16T18:08:02.949+05:30  INFO 4582 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Starting TrendoraApplication using Java 21.0.11 with PID 4582 (/home/nikhilrana07/Documents/Boot_Projects/trendora/target/classes started by nikhilrana07 in /home/nikhilrana07/Documents/Boot_Projects/trendora)
+2026-08-16T18:08:02.959+05:30 DEBUG 4582 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-08-16T18:08:02.961+05:30  INFO 4582 --- [trendora] [main] c.project.trendora.TrendoraApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-16T18:08:04.345+05:30  INFO 4582 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-16T18:08:04.424+05:30  INFO 4582 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
+2026-08-16T18:08:05.119+05:30  INFO 4582 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-16T18:08:05.135+05:30  INFO 4582 --- [trendora] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-16T18:08:05.136+05:30  INFO 4582 --- [trendora] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-08-16T18:08:05.184+05:30  INFO 4582 --- [trendora] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-16T18:08:05.185+05:30  INFO 4582 --- [trendora] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2143 ms
+2026-08-16T18:08:05.384+05:30  INFO 4582 --- [trendora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-16T18:08:05.454+05:30  INFO 4582 --- [trendora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-08-16T18:08:05.487+05:30  INFO 4582 --- [trendora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-16T18:08:05.766+05:30  INFO 4582 --- [trendora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-16T18:08:05.798+05:30  INFO 4582 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-16T18:08:06.192+05:30  INFO 4582 --- [trendora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43b4ec0c
+2026-08-16T18:08:06.194+05:30  INFO 4582 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-16T18:08:06.241+05:30  WARN 4582 --- [trendora] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-16T18:08:06.258+05:30  INFO 4582 --- [trendora] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.46
@@ -24,108 +24,185 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-08-14T19:13:13.756+05:30  INFO 3782 --- [trendora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-14T19:13:14.417+05:30  INFO 3782 --- [trendora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T19:13:14.839+05:30 DEBUG 3782 --- [trendora] [main] c.p.t.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2026-08-14T19:13:15.180+05:30  INFO 3782 --- [trendora] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-08-14T19:13:15.479+05:30  WARN 3782 --- [trendora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-14T19:13:16.579+05:30  INFO 3782 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-08-14T19:13:16.593+05:30  INFO 3782 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Started TrendoraApplication in 9.411 seconds (process running for 10.285)
-2026-08-14T19:13:16.596+05:30  WARN 3782 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-08-14T19:13:16.597+05:30  WARN 3782 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-08-14T19:15:57.128+05:30  INFO 3782 --- [trendora] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-08-14T19:15:57.128+05:30  INFO 3782 --- [trendora] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-08-14T19:15:57.131+05:30  INFO 3782 --- [trendora] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2026-08-14T19:15:57.416+05:30  INFO 3782 --- [trendora] [http-nio-8080-exec-2] c.p.t.service.Impl.UserServiceImpl       : Registering user nikhilrana07
-2026-08-14T19:15:57.910+05:30  INFO 3782 --- [trendora] [http-nio-8080-exec-2] c.p.t.service.Impl.UserServiceImpl       : User registered successfully with id 1
-2026-08-14T19:20:09.300+05:30  INFO 3782 --- [trendora] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-14T19:20:09.304+05:30  INFO 3782 --- [trendora] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-08-14T19:20:09.315+05:30  INFO 3782 --- [trendora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T19:20:09.320+05:30  INFO 3782 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-08-14T19:20:09.344+05:30  INFO 3782 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-08-14T19:20:14.785+05:30  INFO 4300 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Starting TrendoraApplication using Java 21.0.11 with PID 4300 (/home/nikhilrana07/Documents/Boot_Projects/trendora/target/classes started by nikhilrana07 in /home/nikhilrana07/Documents/Boot_Projects/trendora)
-2026-08-14T19:20:14.787+05:30 DEBUG 4300 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Running with Spring Boot v3.5.15, Spring v6.2.19
-2026-08-14T19:20:14.789+05:30  INFO 4300 --- [trendora] [main] c.project.trendora.TrendoraApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-08-14T19:20:16.116+05:30  INFO 4300 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-14T19:20:16.207+05:30  INFO 4300 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 5 JPA repository interfaces.
-2026-08-14T19:20:17.075+05:30  INFO 4300 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-08-14T19:20:17.093+05:30  INFO 4300 --- [trendora] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-08-14T19:20:17.093+05:30  INFO 4300 --- [trendora] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
-2026-08-14T19:20:17.159+05:30  INFO 4300 --- [trendora] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-08-14T19:20:17.160+05:30  INFO 4300 --- [trendora] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2275 ms
-2026-08-14T19:20:17.465+05:30  INFO 4300 --- [trendora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-08-14T19:20:17.546+05:30  INFO 4300 --- [trendora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
-2026-08-14T19:20:17.593+05:30  INFO 4300 --- [trendora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-08-14T19:20:17.992+05:30  INFO 4300 --- [trendora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-14T19:20:18.063+05:30  INFO 4300 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-08-14T19:20:18.561+05:30  INFO 4300 --- [trendora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fa8297b
-2026-08-14T19:20:18.564+05:30  INFO 4300 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-08-14T19:20:18.632+05:30  WARN 4300 --- [trendora] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-08-14T19:20:18.657+05:30  INFO 4300 --- [trendora] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0.46
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-14T19:20:20.043+05:30  INFO 4300 --- [trendora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-14T19:20:20.620+05:30  INFO 4300 --- [trendora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T19:20:21.001+05:30 DEBUG 4300 --- [trendora] [main] c.p.t.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2026-08-14T19:20:21.149+05:30  INFO 4300 --- [trendora] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-08-14T19:20:21.302+05:30  WARN 4300 --- [trendora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-14T19:20:21.958+05:30  INFO 4300 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-08-14T19:20:21.972+05:30  INFO 4300 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Started TrendoraApplication in 8.072 seconds (process running for 9.064)
-2026-08-14T19:20:21.976+05:30  WARN 4300 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-08-14T19:20:21.976+05:30  WARN 4300 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-08-14T19:20:34.379+05:30  INFO 4300 --- [trendora] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-14T19:20:34.385+05:30  INFO 4300 --- [trendora] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-08-14T19:20:34.393+05:30  INFO 4300 --- [trendora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T19:20:34.398+05:30  INFO 4300 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-08-14T19:20:34.412+05:30  INFO 4300 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-08-14T19:20:37.047+05:30  INFO 4401 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Starting TrendoraApplication using Java 21.0.11 with PID 4401 (/home/nikhilrana07/Documents/Boot_Projects/trendora/target/classes started by nikhilrana07 in /home/nikhilrana07/Documents/Boot_Projects/trendora)
-2026-08-14T19:20:37.049+05:30 DEBUG 4401 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Running with Spring Boot v3.5.15, Spring v6.2.19
-2026-08-14T19:20:37.051+05:30  INFO 4401 --- [trendora] [main] c.project.trendora.TrendoraApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-08-14T19:20:38.423+05:30  INFO 4401 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-14T19:20:38.553+05:30  INFO 4401 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 5 JPA repository interfaces.
-2026-08-14T19:20:39.397+05:30  INFO 4401 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-08-14T19:20:39.422+05:30  INFO 4401 --- [trendora] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-08-14T19:20:39.422+05:30  INFO 4401 --- [trendora] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
-2026-08-14T19:20:39.491+05:30  INFO 4401 --- [trendora] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-08-14T19:20:39.493+05:30  INFO 4401 --- [trendora] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2352 ms
-2026-08-14T19:20:39.727+05:30  INFO 4401 --- [trendora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-08-14T19:20:39.795+05:30  INFO 4401 --- [trendora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
-2026-08-14T19:20:39.826+05:30  INFO 4401 --- [trendora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-08-14T19:20:40.109+05:30  INFO 4401 --- [trendora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-14T19:20:40.136+05:30  INFO 4401 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-08-14T19:20:40.501+05:30  INFO 4401 --- [trendora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18463720
-2026-08-14T19:20:40.503+05:30  INFO 4401 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-08-14T19:20:40.563+05:30  WARN 4401 --- [trendora] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-08-14T19:20:40.589+05:30  INFO 4401 --- [trendora] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0.46
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-14T19:20:41.789+05:30  INFO 4401 --- [trendora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-14T19:20:41.890+05:30  INFO 4401 --- [trendora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T19:20:42.299+05:30 DEBUG 4401 --- [trendora] [main] c.p.t.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2026-08-14T19:20:42.537+05:30  INFO 4401 --- [trendora] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-08-14T19:20:42.724+05:30  WARN 4401 --- [trendora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-14T19:20:43.829+05:30  INFO 4401 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-08-14T19:20:43.850+05:30  INFO 4401 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Started TrendoraApplication in 7.66 seconds (process running for 8.36)
-2026-08-14T19:20:43.855+05:30  WARN 4401 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-08-14T19:20:43.856+05:30  WARN 4401 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-08-14T19:22:13.205+05:30  INFO 4401 --- [trendora] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-08-14T19:22:13.205+05:30  INFO 4401 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-08-14T19:22:13.208+05:30  INFO 4401 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2026-08-14T19:22:13.401+05:30  INFO 4401 --- [trendora] [http-nio-8080-exec-1] c.p.t.service.Impl.UserServiceImpl       : Registering user nikhilrana07
-2026-08-14T19:22:13.734+05:30  INFO 4401 --- [trendora] [http-nio-8080-exec-1] c.p.t.service.Impl.UserServiceImpl       : User registered successfully with id 1
-2026-08-14T19:24:03.100+05:30  INFO 4401 --- [trendora] [http-nio-8080-exec-6] c.p.t.service.Impl.ProductServiceImpl    : creating product...
-2026-08-14T19:24:03.128+05:30  INFO 4401 --- [trendora] [http-nio-8080-exec-6] c.p.t.service.Impl.ProductServiceImpl    : Product created successfully with Id 1
-2026-08-14T19:28:41.420+05:30 ERROR 4401 --- [trendora] [http-nio-8080-exec-2] c.p.t.exceptions.GlobalExceptionHandler  : Unexpected exception occurred
+2026-08-16T18:08:07.337+05:30  INFO 4582 --- [trendora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-16T18:08:07.471+05:30  INFO 4582 --- [trendora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-16T18:08:07.837+05:30 DEBUG 4582 --- [trendora] [main] c.p.t.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2026-08-16T18:08:08.015+05:30  INFO 4582 --- [trendora] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-16T18:08:08.180+05:30  WARN 4582 --- [trendora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-16T18:08:08.863+05:30  INFO 4582 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-08-16T18:08:08.874+05:30  INFO 4582 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Started TrendoraApplication in 6.766 seconds (process running for 7.624)
+2026-08-16T18:08:08.877+05:30  WARN 4582 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-08-16T18:08:08.877+05:30  WARN 4582 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-08-16T18:09:06.147+05:30  INFO 4582 --- [trendora] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-16T18:09:06.148+05:30  INFO 4582 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-16T18:09:06.150+05:30  INFO 4582 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-16T18:11:19.040+05:30  WARN 4582 --- [trendora] [http-nio-8080-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1451, SQLState: 23000
+2026-08-16T18:11:19.046+05:30 ERROR 4582 --- [trendora] [http-nio-8080-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : Cannot delete or update a parent row: a foreign key constraint fails (`trendora`.`cart_items`, CONSTRAINT `FK1re40cjegsfvw58xrkdp6bac6` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`))
+2026-08-16T18:11:19.056+05:30 ERROR 4582 --- [trendora] [http-nio-8080-exec-7] c.p.t.exceptions.GlobalExceptionHandler  : Unexpected exception occurred
+
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`trendora`.`cart_items`, CONSTRAINT `FK1re40cjegsfvw58xrkdp6bac6` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`))] [delete from products where product_id=?]; SQL [delete from products where product_id=?]; constraint [null]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:294) ~[spring-orm-6.2.19.jar:6.2.19]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256) ~[spring-orm-6.2.19.jar:6.2.19]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241) ~[spring-orm-6.2.19.jar:6.2.19]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:567) ~[spring-orm-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.5.12.jar:3.5.12]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.19.jar:6.2.19]
+	at jdk.proxy2/jdk.proxy2.$Proxy151.deleteById(Unknown Source) ~[na:na]
+	at com.project.trendora.service.Impl.ProductServiceImpl.deleteProduct(ProductServiceImpl.java:79) ~[classes/:na]
+	at com.project.trendora.controller.ProductController.deleteProduct(ProductController.java:72) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.55.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.55.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:370) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at com.project.trendora.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:50) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`trendora`.`cart_items`, CONSTRAINT `FK1re40cjegsfvw58xrkdp6bac6` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`))] [delete from products where product_id=?]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:62) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:280) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.delete(AbstractDeleteCoordinator.java:87) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:644) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:511) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:414) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1429) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:491) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2354) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1978) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:563) ~[spring-orm-6.2.19.jar:6.2.19]
+	... 118 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`trendora`.`cart_items`, CONSTRAINT `FK1re40cjegsfvw58xrkdp6bac6` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	... 138 common frames omitted
+
+2026-08-16T18:14:22.834+05:30 ERROR 4582 --- [trendora] [http-nio-8080-exec-2] c.p.t.exceptions.GlobalExceptionHandler  : Unexpected exception occurred
 
 jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.NotBlank' validating type 'java.lang.Long'. Check configuration for 'userId'
 	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
@@ -249,30 +326,30 @@ jakarta.validation.UnexpectedTypeException: HV000030: No validator could be foun
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
-2026-08-14T19:31:25.329+05:30  INFO 4401 --- [trendora] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-14T19:31:25.333+05:30  INFO 4401 --- [trendora] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-08-14T19:31:25.341+05:30  INFO 4401 --- [trendora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T19:31:25.344+05:30  INFO 4401 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-08-14T19:31:25.353+05:30  INFO 4401 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-08-14T19:31:29.103+05:30  INFO 4695 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Starting TrendoraApplication using Java 21.0.11 with PID 4695 (/home/nikhilrana07/Documents/Boot_Projects/trendora/target/classes started by nikhilrana07 in /home/nikhilrana07/Documents/Boot_Projects/trendora)
-2026-08-14T19:31:29.108+05:30 DEBUG 4695 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Running with Spring Boot v3.5.15, Spring v6.2.19
-2026-08-14T19:31:29.109+05:30  INFO 4695 --- [trendora] [main] c.project.trendora.TrendoraApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-08-14T19:31:30.157+05:30  INFO 4695 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-14T19:31:30.222+05:30  INFO 4695 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 5 JPA repository interfaces.
-2026-08-14T19:31:30.826+05:30  INFO 4695 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-08-14T19:31:30.841+05:30  INFO 4695 --- [trendora] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-08-14T19:31:30.842+05:30  INFO 4695 --- [trendora] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
-2026-08-14T19:31:30.890+05:30  INFO 4695 --- [trendora] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-08-14T19:31:30.891+05:30  INFO 4695 --- [trendora] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1711 ms
-2026-08-14T19:31:31.021+05:30  INFO 4695 --- [trendora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-08-14T19:31:31.100+05:30  INFO 4695 --- [trendora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
-2026-08-14T19:31:31.129+05:30  INFO 4695 --- [trendora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-08-14T19:31:31.365+05:30  INFO 4695 --- [trendora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-14T19:31:31.390+05:30  INFO 4695 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-08-14T19:31:31.745+05:30  INFO 4695 --- [trendora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@283bb8b7
-2026-08-14T19:31:31.747+05:30  INFO 4695 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-08-14T19:31:31.790+05:30  WARN 4695 --- [trendora] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-08-14T19:31:31.806+05:30  INFO 4695 --- [trendora] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-08-16T18:15:24.605+05:30  INFO 4582 --- [trendora] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-16T18:15:24.615+05:30  INFO 4582 --- [trendora] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-16T18:15:24.628+05:30  INFO 4582 --- [trendora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-16T18:15:24.633+05:30  INFO 4582 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-16T18:15:24.649+05:30  INFO 4582 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-16T18:15:28.267+05:30  INFO 4859 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Starting TrendoraApplication using Java 21.0.11 with PID 4859 (/home/nikhilrana07/Documents/Boot_Projects/trendora/target/classes started by nikhilrana07 in /home/nikhilrana07/Documents/Boot_Projects/trendora)
+2026-08-16T18:15:28.269+05:30 DEBUG 4859 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-08-16T18:15:28.270+05:30  INFO 4859 --- [trendora] [main] c.project.trendora.TrendoraApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-16T18:15:29.760+05:30  INFO 4859 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-16T18:15:29.839+05:30  INFO 4859 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
+2026-08-16T18:15:30.607+05:30  INFO 4859 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-16T18:15:30.628+05:30  INFO 4859 --- [trendora] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-16T18:15:30.628+05:30  INFO 4859 --- [trendora] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-08-16T18:15:30.699+05:30  INFO 4859 --- [trendora] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-16T18:15:30.699+05:30  INFO 4859 --- [trendora] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2321 ms
+2026-08-16T18:15:30.909+05:30  INFO 4859 --- [trendora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-16T18:15:30.973+05:30  INFO 4859 --- [trendora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-08-16T18:15:31.019+05:30  INFO 4859 --- [trendora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-16T18:15:31.290+05:30  INFO 4859 --- [trendora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-16T18:15:31.318+05:30  INFO 4859 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-16T18:15:31.712+05:30  INFO 4859 --- [trendora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7497a554
+2026-08-16T18:15:31.714+05:30  INFO 4859 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-16T18:15:31.760+05:30  WARN 4859 --- [trendora] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-16T18:15:31.778+05:30  INFO 4859 --- [trendora] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.46
@@ -280,242 +357,28 @@ jakarta.validation.UnexpectedTypeException: HV000030: No validator could be foun
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-08-14T19:31:32.984+05:30  INFO 4695 --- [trendora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-14T19:31:33.098+05:30  INFO 4695 --- [trendora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T19:31:33.415+05:30 DEBUG 4695 --- [trendora] [main] c.p.t.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2026-08-14T19:31:33.580+05:30  INFO 4695 --- [trendora] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-08-14T19:31:33.784+05:30  WARN 4695 --- [trendora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-14T19:31:34.618+05:30  INFO 4695 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-08-14T19:31:34.631+05:30  INFO 4695 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Started TrendoraApplication in 6.346 seconds (process running for 6.919)
-2026-08-14T19:31:34.638+05:30  WARN 4695 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-08-14T19:31:34.638+05:30  WARN 4695 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-08-14T19:32:19.650+05:30  INFO 4695 --- [trendora] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-08-14T19:32:19.651+05:30  INFO 4695 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-08-14T19:32:19.653+05:30  INFO 4695 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-08-14T19:32:20.009+05:30 ERROR 4695 --- [trendora] [http-nio-8080-exec-1] c.p.t.exceptions.GlobalExceptionHandler  : Unexpected exception occurred
+2026-08-16T18:15:32.845+05:30  INFO 4859 --- [trendora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-16T18:15:32.945+05:30  INFO 4859 --- [trendora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-16T18:15:33.307+05:30 DEBUG 4859 --- [trendora] [main] c.p.t.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2026-08-16T18:15:33.497+05:30  INFO 4859 --- [trendora] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-16T18:15:33.658+05:30  WARN 4859 --- [trendora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-16T18:15:34.347+05:30  INFO 4859 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-08-16T18:15:34.359+05:30  INFO 4859 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Started TrendoraApplication in 6.846 seconds (process running for 7.407)
+2026-08-16T18:15:34.364+05:30  WARN 4859 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-08-16T18:15:34.364+05:30  WARN 4859 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-08-16T18:15:40.453+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-16T18:15:40.453+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-16T18:15:40.455+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-16T18:15:40.940+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-2] c.p.t.service.Impl.CartServiceImpl       : Removing product 1 from cart for user 1
+2026-08-16T18:15:41.002+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-2] c.p.t.service.Impl.CartServiceImpl       : Removed product 1 completely from cart of user 1
+2026-08-16T18:15:41.003+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-2] c.p.t.service.Impl.CartServiceImpl       : Item removed successfully for user 1
+2026-08-16T18:16:05.803+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-3] c.p.t.service.Impl.CartServiceImpl       : Removing product 2 from cart for user 1
+2026-08-16T18:16:05.818+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-3] c.p.t.service.Impl.CartServiceImpl       : Removed product 2 completely from cart of user 1
+2026-08-16T18:16:05.818+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-3] c.p.t.service.Impl.CartServiceImpl       : Item removed successfully for user 1
+2026-08-16T18:17:37.255+05:30 ERROR 4859 --- [trendora] [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 
-jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.NotBlank' validating type 'java.lang.Long'. Check configuration for 'productId'
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:58) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172) ~[hibernate-validator-8.0.3.Final.jar:8.0.3.Final]
-	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:104) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:67) ~[spring-boot-autoconfigure-3.5.15.jar:3.5.15]
-	at org.springframework.validation.DataBinder.validate(DataBinder.java:1432) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.validateIfApplicable(AbstractMessageConverterMethodArgumentResolver.java:291) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:157) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.55.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.55.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:370) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at com.project.trendora.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:50) ~[classes/:na]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2026-08-14T19:33:25.555+05:30  INFO 4695 --- [trendora] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-14T19:33:25.558+05:30  INFO 4695 --- [trendora] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-08-14T19:33:25.564+05:30  INFO 4695 --- [trendora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T19:33:25.569+05:30  INFO 4695 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-08-14T19:33:25.583+05:30  INFO 4695 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-08-14T19:33:29.396+05:30  INFO 4813 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Starting TrendoraApplication using Java 21.0.11 with PID 4813 (/home/nikhilrana07/Documents/Boot_Projects/trendora/target/classes started by nikhilrana07 in /home/nikhilrana07/Documents/Boot_Projects/trendora)
-2026-08-14T19:33:29.399+05:30 DEBUG 4813 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Running with Spring Boot v3.5.15, Spring v6.2.19
-2026-08-14T19:33:29.400+05:30  INFO 4813 --- [trendora] [main] c.project.trendora.TrendoraApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-08-14T19:33:31.067+05:30  INFO 4813 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-14T19:33:31.162+05:30  INFO 4813 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 5 JPA repository interfaces.
-2026-08-14T19:33:32.468+05:30  INFO 4813 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-08-14T19:33:32.486+05:30  INFO 4813 --- [trendora] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-08-14T19:33:32.486+05:30  INFO 4813 --- [trendora] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
-2026-08-14T19:33:32.550+05:30  INFO 4813 --- [trendora] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-08-14T19:33:32.551+05:30  INFO 4813 --- [trendora] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3049 ms
-2026-08-14T19:33:32.785+05:30  INFO 4813 --- [trendora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-08-14T19:33:32.865+05:30  INFO 4813 --- [trendora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
-2026-08-14T19:33:32.908+05:30  INFO 4813 --- [trendora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-08-14T19:33:33.191+05:30  INFO 4813 --- [trendora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-14T19:33:33.217+05:30  INFO 4813 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-08-14T19:33:33.763+05:30  INFO 4813 --- [trendora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51d88c38
-2026-08-14T19:33:33.766+05:30  INFO 4813 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-08-14T19:33:33.829+05:30  WARN 4813 --- [trendora] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-08-14T19:33:33.847+05:30  INFO 4813 --- [trendora] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0.46
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-14T19:33:35.257+05:30  INFO 4813 --- [trendora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-14T19:33:35.424+05:30  INFO 4813 --- [trendora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T19:33:35.932+05:30 DEBUG 4813 --- [trendora] [main] c.p.t.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2026-08-14T19:33:36.139+05:30  INFO 4813 --- [trendora] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-08-14T19:33:36.335+05:30  WARN 4813 --- [trendora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-14T19:33:37.136+05:30  INFO 4813 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-08-14T19:33:37.151+05:30  INFO 4813 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Started TrendoraApplication in 8.604 seconds (process running for 9.153)
-2026-08-14T19:33:37.155+05:30  WARN 4813 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-08-14T19:33:37.155+05:30  WARN 4813 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-08-14T19:33:44.134+05:30  INFO 4813 --- [trendora] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-08-14T19:33:44.135+05:30  INFO 4813 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-08-14T19:33:44.138+05:30  INFO 4813 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2026-08-14T19:33:44.653+05:30  INFO 4813 --- [trendora] [http-nio-8080-exec-1] c.p.t.service.Impl.CartServiceImpl       : Adding item to cart for user 1
-2026-08-14T19:33:44.805+05:30  INFO 4813 --- [trendora] [http-nio-8080-exec-1] c.p.t.service.Impl.CartServiceImpl       : New cart created for user 1
-2026-08-14T19:33:44.846+05:30  INFO 4813 --- [trendora] [http-nio-8080-exec-1] c.p.t.service.Impl.CartServiceImpl       : Added product 1 to cart of user 1
-2026-08-14T19:33:44.850+05:30  INFO 4813 --- [trendora] [http-nio-8080-exec-1] c.p.t.service.Impl.CartServiceImpl       : Item added to cart successfully for user 1
-2026-08-14T19:45:30.117+05:30  INFO 4813 --- [trendora] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-14T19:45:30.128+05:30  INFO 4813 --- [trendora] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-08-14T19:45:30.156+05:30  INFO 4813 --- [trendora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T19:45:30.159+05:30  INFO 4813 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-08-14T19:45:30.170+05:30  INFO 4813 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-08-14T22:51:52.870+05:30  INFO 7407 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Starting TrendoraApplication using Java 21.0.11 with PID 7407 (/home/nikhilrana07/Documents/Boot_Projects/trendora/target/classes started by nikhilrana07 in /home/nikhilrana07/Documents/Boot_Projects/trendora)
-2026-08-14T22:51:52.874+05:30 DEBUG 7407 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Running with Spring Boot v3.5.15, Spring v6.2.19
-2026-08-14T22:51:52.875+05:30  INFO 7407 --- [trendora] [main] c.project.trendora.TrendoraApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-08-14T22:51:54.388+05:30  INFO 7407 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-14T22:51:54.498+05:30  INFO 7407 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 5 JPA repository interfaces.
-2026-08-14T22:51:55.355+05:30  INFO 7407 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-08-14T22:51:55.377+05:30  INFO 7407 --- [trendora] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-08-14T22:51:55.378+05:30  INFO 7407 --- [trendora] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
-2026-08-14T22:51:55.471+05:30  INFO 7407 --- [trendora] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-08-14T22:51:55.471+05:30  INFO 7407 --- [trendora] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2518 ms
-2026-08-14T22:51:55.758+05:30  INFO 7407 --- [trendora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-08-14T22:51:55.830+05:30  INFO 7407 --- [trendora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
-2026-08-14T22:51:55.864+05:30  INFO 7407 --- [trendora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-08-14T22:51:56.194+05:30  INFO 7407 --- [trendora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-14T22:51:56.223+05:30  INFO 7407 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-08-14T22:51:56.689+05:30  INFO 7407 --- [trendora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@af9dd34
-2026-08-14T22:51:56.691+05:30  INFO 7407 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-08-14T22:51:56.746+05:30  WARN 7407 --- [trendora] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-08-14T22:51:56.768+05:30  INFO 7407 --- [trendora] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0.46
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-14T22:51:58.102+05:30  INFO 7407 --- [trendora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-14T22:51:58.225+05:30  INFO 7407 --- [trendora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T22:51:58.703+05:30 DEBUG 7407 --- [trendora] [main] c.p.t.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2026-08-14T22:51:58.935+05:30  INFO 7407 --- [trendora] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-08-14T22:51:59.150+05:30  WARN 7407 --- [trendora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-14T22:52:00.024+05:30  INFO 7407 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-08-14T22:52:00.037+05:30  INFO 7407 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Started TrendoraApplication in 8.03 seconds (process running for 8.671)
-2026-08-14T22:52:00.042+05:30  WARN 7407 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-08-14T22:52:00.043+05:30  WARN 7407 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-08-14T22:52:15.857+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-08-14T22:52:15.857+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-08-14T22:52:15.860+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2026-08-14T22:53:04.146+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-3] c.p.t.service.Impl.CartServiceImpl       : Adding item to cart for user 1
-2026-08-14T22:53:04.201+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-3] c.p.t.service.Impl.CartServiceImpl       : Updated quantity of product 1 in cart of user 1
-2026-08-14T22:53:04.201+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-3] c.p.t.service.Impl.CartServiceImpl       : Item added to cart successfully for user 1
-2026-08-14T22:53:10.911+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-4] c.p.t.service.Impl.CartServiceImpl       : Adding item to cart for user 1
-2026-08-14T22:53:10.930+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-4] c.p.t.service.Impl.CartServiceImpl       : Updated quantity of product 1 in cart of user 1
-2026-08-14T22:53:10.930+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-4] c.p.t.service.Impl.CartServiceImpl       : Item added to cart successfully for user 1
-2026-08-14T22:54:04.178+05:30 ERROR 7407 --- [trendora] [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-
-io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 1
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:290) ~[jjwt-impl-0.11.0.jar:0.11.0]
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-08-15T13:52:49Z. Current time: 2026-08-16T12:47:37Z, a difference of 82488254 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:439) ~[jjwt-impl-0.11.0.jar:0.11.0]
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:541) ~[jjwt-impl-0.11.0.jar:0.11.0]
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:601) ~[jjwt-impl-0.11.0.jar:0.11.0]
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.0.jar:0.11.0]
@@ -586,87 +449,24 @@ io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
-2026-08-14T22:54:20.994+05:30 ERROR 7407 --- [trendora] [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-
-io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 1
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:290) ~[jjwt-impl-0.11.0.jar:0.11.0]
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:541) ~[jjwt-impl-0.11.0.jar:0.11.0]
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:601) ~[jjwt-impl-0.11.0.jar:0.11.0]
-	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.0.jar:0.11.0]
-	at com.project.trendora.security.JwtUtils.extractAllClaims(JwtUtils.java:67) ~[classes/:na]
-	at com.project.trendora.security.JwtUtils.extractClaim(JwtUtils.java:29) ~[classes/:na]
-	at com.project.trendora.security.JwtUtils.extractUsername(JwtUtils.java:24) ~[classes/:na]
-	at com.project.trendora.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:39) ~[classes/:na]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.11.jar:6.5.11]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2026-08-14T22:56:41.490+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-2] c.p.t.service.Impl.ProductServiceImpl    : creating product...
-2026-08-14T22:56:41.550+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-2] c.p.t.service.Impl.ProductServiceImpl    : Product created successfully with Id 2
-2026-08-14T22:58:17.238+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-4] c.p.t.service.Impl.CartServiceImpl       : Adding item to cart for user 1
-2026-08-14T22:58:17.261+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-4] c.p.t.service.Impl.CartServiceImpl       : Added product 2 to cart of user 1
-2026-08-14T22:58:17.262+05:30  INFO 7407 --- [trendora] [http-nio-8080-exec-4] c.p.t.service.Impl.CartServiceImpl       : Item added to cart successfully for user 1
-2026-08-14T22:59:42.679+05:30  INFO 7407 --- [trendora] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-14T22:59:42.682+05:30  INFO 7407 --- [trendora] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-08-14T22:59:42.688+05:30  INFO 7407 --- [trendora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-14T22:59:42.691+05:30  INFO 7407 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-08-14T22:59:42.705+05:30  INFO 7407 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-16T18:17:48.696+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-8] c.p.t.service.Impl.ProductServiceImpl    : creating product...
+2026-08-16T18:17:48.742+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-8] c.p.t.service.Impl.ProductServiceImpl    : Product created successfully with Id 3
+2026-08-16T18:18:46.006+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-9] c.p.t.service.Impl.ProductServiceImpl    : creating product...
+2026-08-16T18:18:46.021+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-9] c.p.t.service.Impl.ProductServiceImpl    : Product created successfully with Id 4
+2026-08-16T18:19:32.926+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-10] c.p.t.service.Impl.ProductServiceImpl    : creating product...
+2026-08-16T18:19:32.937+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-10] c.p.t.service.Impl.ProductServiceImpl    : Product created successfully with Id 5
+2026-08-16T18:20:23.598+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-1] c.p.t.service.Impl.ProductServiceImpl    : creating product...
+2026-08-16T18:20:23.614+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-1] c.p.t.service.Impl.ProductServiceImpl    : Product created successfully with Id 6
+2026-08-16T18:21:02.685+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-2] c.p.t.service.Impl.ProductServiceImpl    : creating product...
+2026-08-16T18:21:02.699+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-2] c.p.t.service.Impl.ProductServiceImpl    : Product created successfully with Id 7
+2026-08-16T18:21:40.215+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-3] c.p.t.service.Impl.ProductServiceImpl    : creating product...
+2026-08-16T18:21:40.229+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-3] c.p.t.service.Impl.ProductServiceImpl    : Product created successfully with Id 8
+2026-08-16T18:22:02.446+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-5] c.p.t.service.Impl.ProductServiceImpl    : creating product...
+2026-08-16T18:22:02.460+05:30  INFO 4859 --- [trendora] [http-nio-8080-exec-5] c.p.t.service.Impl.ProductServiceImpl    : Product created successfully with Id 9
+2026-08-16T18:23:50.563+05:30  WARN 4859 --- [trendora] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-08-16T18:24:22.777+05:30  WARN 4859 --- [trendora] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-08-16T18:24:54.808+05:30  INFO 4859 --- [trendora] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-16T18:24:54.810+05:30  INFO 4859 --- [trendora] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-16T18:24:54.816+05:30  INFO 4859 --- [trendora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-16T18:24:54.819+05:30  INFO 4859 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-16T18:24:54.831+05:30  INFO 4859 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

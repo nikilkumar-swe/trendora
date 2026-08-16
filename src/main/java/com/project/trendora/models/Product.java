@@ -24,6 +24,7 @@ public class Product {
     @Column(length = 220)
     private String description;
     private Double price;
+    private String category;
     private Integer stockQuantity;
     private String brand;
     private String imageUrl;
