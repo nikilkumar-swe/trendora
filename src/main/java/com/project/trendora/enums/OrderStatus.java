@@ -1,9 +1,10 @@
 package com.project.trendora.enums;
 
 public enum OrderStatus {
-    PENDING,
+    PLACED,
     CONFIRMED,
     SHIPPED,
     DELIVERED,
-    CANCELLED
+    CANCELLED,
+    OUT_FOR_DELIVERY
 }

@@ -35,7 +35,8 @@ public class SecurityConfig {
                                         "/v3/api-docs/**").permitAll()
                                 .requestMatchers("/api/product/add",
                                         "/api/product/delete/**",
-                                        "/api/product/update/**").hasRole("ADMIN")
+                                        "/api/product/update/**",
+                                        "/api/admin/**").hasRole("ADMIN")
                                 .anyRequest()
                                 .authenticated()
                 )

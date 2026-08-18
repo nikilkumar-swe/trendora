@@ -8,6 +8,8 @@ import com.project.trendora.dto.OrderItemResponse;
 import com.project.trendora.dto.OrderRequest;
 import com.project.trendora.dto.OrderResponse;
 import com.project.trendora.dto.ViewOrderResponse;
+import com.project.trendora.enums.OrderStatus;
+import com.project.trendora.exceptions.ProductNotFoundException;
 import com.project.trendora.models.*;
 import com.project.trendora.service.OrderService;
 import jakarta.transaction.Transactional;
@@ -134,6 +136,28 @@ public class OrderServiceImpl implements OrderService {
                 })
                 .toList();
     }
+
+    @Override
+    public String cancelOrder(Long userId) {
+        //find the order
+        Order order=orderRepository.findById(userId).orElseThrow(()->new ProductNotFoundException("Product Not found"));
+
+        //if order is shipped ,out for delivery ,Delivered,cannot cancel
+        if (order.getStatus()== OrderStatus.DELIVERED ||
+            order.getStatus()==OrderStatus.SHIPPED||
+            order.getStatus()==OrderStatus.OUT_FOR_DELIVERY){
+            throw new RuntimeException("Order cannot be cancelled");
+        }
+        //if already cancelled
+        if(order.getStatus()==OrderStatus.CANCELLED){
+            throw new RuntimeException("Order is already cancelled");
+        }
+
+        order.setStatus(OrderStatus.CANCELLED);
+        orderRepository.save(order);
+        return "Order is cancelled successfully";
+    }
+
 
     private OrderResponse mapToResponse(Order order){
         OrderResponse response=new OrderResponse();

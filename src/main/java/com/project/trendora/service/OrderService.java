@@ -8,5 +8,6 @@ public interface OrderService {
 
     OrderResponse placeOrder(OrderRequest orderRequest);
     List<ViewOrderResponse> viewOrders(Long userId);
+    String cancelOrder(Long userId);
 
 }

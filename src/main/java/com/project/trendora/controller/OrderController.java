@@ -28,4 +28,9 @@ public class OrderController {
         return ResponseEntity.ok(orderService.viewOrders(userId));
     }
 
+    @PutMapping("/cancel/{orderId}")
+    public ResponseEntity<String> cancelOrder(@PathVariable Long orderId){
+        return ResponseEntity.ok(orderService.cancelOrder(orderId));
+    }
+
 }
