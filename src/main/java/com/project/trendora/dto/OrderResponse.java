@@ -8,6 +8,6 @@ public class OrderResponse {
 
     private Long orderId;
     private Double totalAmount;
-    private OrderStatus orderStatus;
+    private OrderStatus status;
 
 }

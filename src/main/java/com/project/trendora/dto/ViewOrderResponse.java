@@ -12,10 +12,10 @@ public class ViewOrderResponse{
     private Long orderId;
     private List<OrderItemResponse> orderItems;
     private Double totalAmount;
-    private OrderStatus status;
     private PaymentMethod paymentMethod;
     private PaymentStatus paymentStatus;
     private String shippingAddress;
     private LocalDateTime orderDate;
     private LocalDateTime deliveryDate;
+    private OrderStatus orderStatus;
 }

@@ -32,6 +32,7 @@ public class Order {
     //order status
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
+
     //payment method
     @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
@@ -48,8 +49,9 @@ public class Order {
     @PrePersist
     public void prePersist() {
         this.orderDate = LocalDateTime.now();
-        this.status = OrderStatus.PENDING;
         this.paymentStatus = PaymentStatus.PENDING;
         this.deliveryDate=LocalDateTime.now().plusDays(4);
+        this.status=OrderStatus.PLACED;
     }
+
 }

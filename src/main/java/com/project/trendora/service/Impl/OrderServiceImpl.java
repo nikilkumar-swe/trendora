@@ -76,7 +76,6 @@ public class OrderServiceImpl implements OrderService {
             orderItem.setPriceAtPurchase(price);
             orderItem.setQuantity(quantity);
             orderItem.setSubtotal(price * quantity);
-
             orderItems.add(orderItem);
         }
         order.setOrderItems(orderItems);
@@ -107,7 +106,7 @@ public class OrderServiceImpl implements OrderService {
 
                     response.setOrderId(order.getOrderId());
                     response.setTotalAmount(order.getTotalAmount());
-                    response.setStatus(order.getStatus());
+                    response.setOrderStatus(order.getStatus());
                     response.setPaymentMethod(order.getPaymentMethod());
                     response.setPaymentStatus(order.getPaymentStatus());
                     response.setShippingAddress(order.getShippingAddress());
@@ -163,7 +162,7 @@ public class OrderServiceImpl implements OrderService {
         OrderResponse response=new OrderResponse();
         response.setOrderId(order.getOrderId());
         response.setTotalAmount(order.getTotalAmount());
-        response.setOrderStatus(order.getStatus());
+        response.setStatus(order.getStatus());
         return response;
     }
 

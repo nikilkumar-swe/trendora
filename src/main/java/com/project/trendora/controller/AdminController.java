@@ -11,13 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/admin")
 public class AdminController {
 
-    private static final AdminServiceImpl adminServices;
+    private final AdminServiceImpl adminServices;
 
-    public AdminController(AdminServiceImpl )
-
+    public AdminController(AdminServiceImpl adminServices){
+        this.adminServices=adminServices;
+    }
 
     @PutMapping("/orders/accept/{orderId}")
     public ResponseEntity<String> acceptOrder(@PathVariable Long orderId){
-
+        return ResponseEntity.ok(adminServices.acceptOrder(orderId));
     }
 }
