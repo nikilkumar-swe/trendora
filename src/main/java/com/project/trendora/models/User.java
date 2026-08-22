@@ -1,6 +1,5 @@
 package com.project.trendora.models;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;

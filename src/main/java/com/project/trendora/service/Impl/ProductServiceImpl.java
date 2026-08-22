@@ -16,6 +16,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 @RequiredArgsConstructor
@@ -121,6 +123,16 @@ public class ProductServiceImpl implements ProductService {
         Product savedProduct= productRepository.save(product);
         logger.info("Product saved successfully with id{}",savedProduct.getProductId());
         return mapToResponse(savedProduct);
+    }
+
+    @Override
+    public List<Product> searchProducts(String keyword) {
+        return productRepository
+                .findByNameContainingIgnoreCaseOrDescriptionContainingIgnoreCaseOrCategoryContainingIgnoreCase(
+                        keyword,
+                        keyword,
+                        keyword
+                );
     }
 
     private  ProductResponse mapToResponse(Product savedProduct){

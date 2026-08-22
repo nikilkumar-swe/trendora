@@ -2,6 +2,7 @@ package com.project.trendora.controller;
 
 import com.project.trendora.dto.ProductRequest;
 import com.project.trendora.dto.ProductResponse;
+import com.project.trendora.models.Product;
 import com.project.trendora.service.Impl.ProductServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -76,6 +77,11 @@ public class ProductController {
     @PatchMapping("/update")
     public ResponseEntity<ProductResponse> updateProduct(@RequestParam Long id,@Valid @RequestBody ProductRequest productRequest){
         return ResponseEntity.ok(productService.updateProduct(id,productRequest));
+    }
+
+    @GetMapping("/search")
+    public List<Product> searchProducts(@RequestParam String keyword) {
+        return productService.searchProducts(keyword);
     }
 
 }
