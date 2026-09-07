@@ -47,6 +47,34 @@ public class AdminServiceImpl implements AdminService {
         return convertToDTO(savedOrder);
     }
 
+    @Override
+    public OrderResponse shipOrder(Long orderId) {
+
+        Order order=orderRepository.findById(orderId).orElseThrow(()->new OrderNotFoundException("Order not found"));
+        //order must be processed before shipping
+        if (order.getStatus()!=OrderStatus.PROCESSING){
+            throw new RuntimeException("Only processed order can be shipped");
+        }
+
+        order.setStatus(OrderStatus.SHIPPED);
+        Order savedOrder=orderRepository.save(order);
+
+        return convertToDTO(savedOrder);
+    }
+
+    @Override
+    public OrderResponse orderDelivery(Long orderId) {
+        Order order=orderRepository.findById(orderId).orElseThrow(()->new OrderNotFoundException("Order not found"));
+        //order must be shipped before delivering
+        if (order.getStatus()!=OrderStatus.SHIPPED){
+            throw new RuntimeException("Order must be shipped before delivery");
+        }
+        order.setStatus(OrderStatus.DELIVERED);
+        Order savedOrder=orderRepository.save(order);
+        return convertToDTO(savedOrder);
+    }
+
+
     private OrderResponse convertToDTO(Order order) {
         OrderResponse response = new OrderResponse();
         response.setTotalAmount(order.getTotalAmount());

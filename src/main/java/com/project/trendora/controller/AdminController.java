@@ -28,4 +28,17 @@ public class AdminController {
         OrderResponse order=adminServices.processOrder(orderId);
         return ResponseEntity.ok(order);
     }
+    @PutMapping("/orders/{orderId}/ship")
+    public  ResponseEntity<OrderResponse> orderShipping(@PathVariable Long orderId){
+        OrderResponse order=adminServices.shipOrder(orderId);
+        return ResponseEntity.ok().body(order);
+    }
+    @PutMapping("/orders/{orderId}/deliver")
+    public ResponseEntity<OrderResponse> isDelivered(@PathVariable Long orderId){
+        OrderResponse order=adminServices.orderDelivery(orderId);
+        return ResponseEntity.ok().body(order);
+    }
+
+
+
 }

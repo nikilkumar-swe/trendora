@@ -8,4 +8,6 @@ import com.project.trendora.models.Order;
 public interface AdminService {
     String acceptOrder(Long userId);
     OrderResponse processOrder(Long orderId);
+    OrderResponse shipOrder(Long orderId);
+    OrderResponse orderDelivery(Long orderId);
 }
