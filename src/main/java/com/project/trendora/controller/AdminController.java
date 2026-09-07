@@ -1,5 +1,7 @@
 package com.project.trendora.controller;
 
+import com.project.trendora.dto.OrderResponse;
+import com.project.trendora.models.Order;
 import com.project.trendora.service.Impl.AdminServiceImpl;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class AdminController {
 
     private final AdminServiceImpl adminServices;
-
     public AdminController(AdminServiceImpl adminServices){
         this.adminServices=adminServices;
     }
@@ -20,5 +21,11 @@ public class AdminController {
     @PutMapping("/orders/accept/{orderId}")
     public ResponseEntity<String> acceptOrder(@PathVariable Long orderId){
         return ResponseEntity.ok(adminServices.acceptOrder(orderId));
+    }
+
+    @PutMapping("/orders/{orderId}/process")
+    public ResponseEntity<OrderResponse> OrderProcessing(@PathVariable Long orderId){
+        OrderResponse order=adminServices.processOrder(orderId);
+        return ResponseEntity.ok(order);
     }
 }

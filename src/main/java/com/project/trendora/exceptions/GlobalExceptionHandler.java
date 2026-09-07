@@ -39,5 +39,13 @@ public class GlobalExceptionHandler {
         log.error("Unexpected exception occurred", ex);
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
     }
+    @ExceptionHandler(OrderNotFoundException.class)
+    public ResponseEntity<?> handleOrderNotFoundException(OrderNotFoundException obj){
+        log.warn("order not found {}",obj.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(obj.getMessage());
+    }
+
+
+
 }
 
