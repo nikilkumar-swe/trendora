@@ -35,6 +35,7 @@ public class Order {
 
     //payment method
     @Enumerated(EnumType.STRING)
+    @Column(name = "payment_method")
     private PaymentMethod paymentMethod;
     //payment status
     @Enumerated(EnumType.STRING)
