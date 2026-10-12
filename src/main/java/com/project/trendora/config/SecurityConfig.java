@@ -32,7 +32,10 @@ public class SecurityConfig {
                         auth.requestMatchers("/api/user/register"
                                 ,"/api/user/login",
                                         "/swagger-ui/**",
-                                        "/v3/api-docs/**").permitAll()
+                                        "/v3/api-docs/**",
+                                        "/checkout.html",
+                                        "/api/payments/create/**",
+                                        "/api/payments/verify").permitAll()
                                 .requestMatchers("/api/product/add",
                                         "/api/product/delete/**",
                                         "/api/product/update/**",

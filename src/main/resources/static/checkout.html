@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trendora Payment Checkout</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f5f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            box-shadow: 0 5px 20px #0002;
+        }
+        input, button {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        pre {
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Trendora Checkout</h2>
+
+    <input type="number" id="orderId"
+           placeholder="Enter Trendora Order ID" min="1">
+
+    <button onclick="payNow()">Pay Now</button>
+
+    <p id="status"></p>
+    <pre id="result"></pre>
+</div>
+
+<script>
+    // Replace with your Razorpay TEST Key ID.
+    // Never put the Key Secret here.
+    const RAZORPAY_KEY_ID = "rzp_test_TgBQ16yO9m2tuM";
+
+    async function payNow() {
+        const orderId = document.getElementById("orderId").value;
+        const status = document.getElementById("status");
+        const result = document.getElementById("result");
+
+        result.textContent = "";
+
+        if (!orderId || Number(orderId) <= 0) {
+            status.textContent = "Enter a valid order ID.";
+            return;
+        }
+
+        try {
+            status.textContent = "Creating Razorpay order...";
+
+            // Step 1: Your existing Spring Boot API
+            const createResponse = await fetch(
+                `/api/payments/create/${orderId}`,
+                { method: "POST" }
+            );
+
+            if (!createResponse.ok) {
+                throw new Error(
+                    "Order creation failed: " + createResponse.status
+                );
+            }
+
+            const payment = await createResponse.json();
+
+            // Step 2: Open Razorpay Checkout
+            const options = {
+                key: RAZORPAY_KEY_ID,
+                amount: Math.round(payment.amount * 100),
+                currency: payment.currency,
+                name: "Trendora",
+                description: "E-commerce Order Payment",
+                order_id: payment.razorpayOrderId,
+
+                handler: async function(response) {
+                    status.textContent = "Verifying payment...";
+
+                    // Step 3: Send Checkout response to backend
+                    const verificationResponse = await fetch(
+                        "/api/payments/verify",
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                razorpayOrderId:
+                                    response.razorpay_order_id,
+                                razorpayPaymentId:
+                                    response.razorpay_payment_id,
+                                razorpaySignature:
+                                    response.razorpay_signature
+                            })
+                        }
+                    );
+
+                    const message = await verificationResponse.text();
+
+                    if (!verificationResponse.ok) {
+                        status.textContent = "Payment verification failed";
+                        result.textContent = message;
+                        return;
+                    }
+
+                    status.textContent = "Payment verified successfully!";
+                    result.textContent =
+                        "Payment ID: " + response.razorpay_payment_id +
+                        "\nOrder ID: " + response.razorpay_order_id;
+                },
+
+                modal: {
+                    ondismiss: function() {
+                        status.textContent = "Checkout closed.";
+                    }
+                }
+            };
+
+            const razorpay = new Razorpay(options);
+
+            razorpay.on("payment.failed", function(response) {
+                status.textContent = "Payment failed.";
+                result.textContent =
+                    response.error.description || "Payment failed";
+            });
+
+            razorpay.open();
+            status.textContent = "Complete payment in Razorpay Checkout.";
+
+        } catch (error) {
+            status.textContent = "Error";
+            result.textContent = error.message;
+        }
+    }
+</script>
+</body>
+</html>

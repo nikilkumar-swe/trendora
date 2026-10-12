@@ -3,6 +3,7 @@ package com.project.trendora.service.Impl;
 import com.project.trendora.Repository.OrderRepository;
 import com.project.trendora.Repository.PaymentRepository;
 import com.project.trendora.dto.PaymentResponseDTO;
+import com.project.trendora.dto.PaymentVerificationRequest;
 import com.project.trendora.enums.PaymentMethod;
 import com.project.trendora.enums.PaymentStatus;
 import com.project.trendora.models.Order;
@@ -10,6 +11,8 @@ import com.project.trendora.models.Payment;
 import com.project.trendora.service.PaymentService;
 import com.razorpay.RazorpayClient;
 import com.razorpay.RazorpayException;
+import com.razorpay.Utils;
+import jakarta.transaction.Transactional;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -26,6 +29,9 @@ public class PaymentServiceImpl implements PaymentService {
     @Value("${razorpay.key.id}")
     private String keyId;
 
+    @Value("${razorpay.key.secret}")
+    private String razorpayKeySecret;
+
     public PaymentServiceImpl(
             RazorpayClient razorpayClient,
             PaymentRepository paymentRepository,
@@ -36,6 +42,7 @@ public class PaymentServiceImpl implements PaymentService {
         this.orderRepository = orderRepository;
     }
 
+    //create payment
     @Override
     public PaymentResponseDTO createPayment(Long orderId) {
         try {
@@ -88,4 +95,71 @@ public class PaymentServiceImpl implements PaymentService {
 
     }
 
+
+    //verify payment
+    @Override
+    @Transactional
+    public boolean verifyPayment(PaymentVerificationRequest request) {
+
+        // 1. Find the payment we created earlier
+        Payment payment = paymentRepository
+                .findByRazorpayOrderId(request.getRazorpayOrderId())
+                .orElseThrow(() -> new RuntimeException("Payment not found"));
+
+        try {
+
+            // 2. Prepare Razorpay verification data
+            JSONObject options = new JSONObject();
+
+            // IMPORTANT:
+            // Use order id stored in DB
+            options.put(
+                    "razorpay_order_id",
+                    payment.getRazorpayOrderId()
+            );
+
+            options.put(
+                    "razorpay_payment_id",
+                    request.getRazorpayPaymentId()
+            );
+
+            options.put(
+                    "razorpay_signature",
+                    request.getRazorpaySignature()
+            );
+
+            // 3. Verify signature
+            boolean valid = Utils.verifyPaymentSignature(
+                    options,
+                    razorpayKeySecret
+            );
+
+            if (!valid) {
+                return false;
+            }
+
+            // 4. Verification successful
+            payment.setRazorpayPaymentId(
+                    request.getRazorpayPaymentId()
+            );
+
+            payment.setRazorpaySignature(
+                    request.getRazorpaySignature()
+            );
+
+            // Adapt enum/value to your existing Payment entity
+            payment.setStatus(PaymentStatus.SUCCESS);
+
+            paymentRepository.save(payment);
+
+            return true;
+
+        } catch (Exception e) {
+            throw new RuntimeException(
+                    "Payment verification failed",
+                    e
+            );
+        }
+
+    }
 }
