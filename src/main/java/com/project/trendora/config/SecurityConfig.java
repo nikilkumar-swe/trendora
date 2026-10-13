@@ -25,23 +25,38 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
-        return http.csrf(csrf->csrf.disable())
-                .sessionManagement(session->
-                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(auth->
-                        auth.requestMatchers("/api/user/register"
-                                ,"/api/user/login",
+        return
+                http
+                        .csrf(csrf->csrf.disable())
+
+                        .sessionManagement(session->
+                                session.sessionCreationPolicy(
+                                        SessionCreationPolicy.STATELESS
+                                )
+                        )
+
+                .authorizeHttpRequests(auth-> auth
+                        //public endpoints
+                        .requestMatchers(
+                                "/api/user/register",
+                                        "/api/user/login",
                                         "/swagger-ui/**",
                                         "/v3/api-docs/**",
-                                        "/checkout.html",
-                                        "/api/payments/create/**",
-                                        "/api/payments/verify").permitAll()
-                                .requestMatchers("/api/product/add",
-                                        "/api/product/delete/**",
-                                        "/api/product/update/**",
-                                        "/api/admin/**").hasRole("ADMIN")
-                                .anyRequest()
-                                .authenticated()
+                                        "/checkout.html"
+                                       ).permitAll()
+
+                        //Admin-only endpoints
+                        .requestMatchers("/api/product/add",
+                                            "/api/product/delete/**",
+                                            "/api/product/update/**",
+                                            "/api/admin/**"
+                                ).hasRole("ADMIN")
+
+                        // Payment endpoints require authentication
+                        .requestMatchers("/api/payments/**").authenticated()
+                       // All other APIs require authentication
+                        .anyRequest()
+                        .authenticated()
                 )
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 //.httpBasic(Customizer.withDefaults())

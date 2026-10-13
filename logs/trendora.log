@@ -1281,3 +1281,47 @@ java.lang.IllegalStateException: Only processed orders can be shipped
 2026-10-13T12:44:14.904+05:30  INFO 11630 --- [trendora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-10-13T12:44:14.907+05:30  INFO 11630 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-10-13T12:44:14.917+05:30  INFO 11630 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-13T14:27:46.238+05:30  INFO 14768 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Starting TrendoraApplication using Java 21.0.11 with PID 14768 (/home/nikhilrana07/Documents/Boot_Projects/trendora/target/classes started by nikhilrana07 in /home/nikhilrana07/Documents/Boot_Projects/trendora)
+2026-10-13T14:27:46.241+05:30 DEBUG 14768 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-10-13T14:27:46.243+05:30  INFO 14768 --- [trendora] [main] c.project.trendora.TrendoraApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-10-13T14:27:47.822+05:30  INFO 14768 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-13T14:27:47.925+05:30  INFO 14768 --- [trendora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 6 JPA repository interfaces.
+2026-10-13T14:27:48.762+05:30  INFO 14768 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-13T14:27:48.780+05:30  INFO 14768 --- [trendora] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-13T14:27:48.781+05:30  INFO 14768 --- [trendora] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-10-13T14:27:48.843+05:30  INFO 14768 --- [trendora] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-13T14:27:48.844+05:30  INFO 14768 --- [trendora] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2520 ms
+2026-10-13T14:27:49.112+05:30  INFO 14768 --- [trendora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-13T14:27:49.239+05:30  INFO 14768 --- [trendora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-13T14:27:49.293+05:30  INFO 14768 --- [trendora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-13T14:27:49.735+05:30  INFO 14768 --- [trendora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-13T14:27:49.779+05:30  INFO 14768 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-13T14:27:50.391+05:30  INFO 14768 --- [trendora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@144440f5
+2026-10-13T14:27:50.395+05:30  INFO 14768 --- [trendora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-13T14:27:50.476+05:30  WARN 14768 --- [trendora] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-13T14:27:50.496+05:30  INFO 14768 --- [trendora] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-13T14:27:52.836+05:30  INFO 14768 --- [trendora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-13T14:27:53.036+05:30  INFO 14768 --- [trendora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-13T14:27:53.608+05:30 DEBUG 14768 --- [trendora] [main] c.p.t.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2026-10-13T14:27:54.098+05:30  INFO 14768 --- [trendora] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-10-13T14:27:54.476+05:30  WARN 14768 --- [trendora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-13T14:27:56.581+05:30  INFO 14768 --- [trendora] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-10-13T14:27:56.612+05:30  INFO 14768 --- [trendora] [main] c.project.trendora.TrendoraApplication   : Started TrendoraApplication in 11.301 seconds (process running for 12.324)
+2026-10-13T14:27:56.619+05:30  WARN 14768 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-13T14:27:56.620+05:30  WARN 14768 --- [trendora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-13T14:28:00.484+05:30  INFO 14768 --- [trendora] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-13T14:28:00.484+05:30  INFO 14768 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-13T14:28:00.488+05:30  INFO 14768 --- [trendora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-13T14:29:38.248+05:30  INFO 14768 --- [trendora] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1172 ms
+2026-10-13T14:33:38.985+05:30  INFO 14768 --- [trendora] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-13T14:33:38.988+05:30  INFO 14768 --- [trendora] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-10-13T14:33:38.994+05:30  INFO 14768 --- [trendora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-13T14:33:38.997+05:30  INFO 14768 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-13T14:33:39.006+05:30  INFO 14768 --- [trendora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
