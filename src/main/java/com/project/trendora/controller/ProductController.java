@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,7 @@ import java.util.List;
 @RequestMapping("/api/product")
 @RequiredArgsConstructor
 @Tag(name = "Product APIs",description = "operational APIs for product")
+@Slf4j
 public class ProductController {
 
     private final ProductServiceImpl productService;
@@ -32,7 +34,10 @@ public class ProductController {
     )
     @PostMapping("/add")
     public ResponseEntity<ProductResponse> addProduct(@Valid @RequestBody ProductRequest productRequest){
-        return ResponseEntity.ok(productService.addProduct(productRequest));
+        log.info("Add product request received");
+        com.project.trendora.dto.ProductResponse response =productService.addProduct(productRequest);
+        log.info("product added successfully");
+        return ResponseEntity.ok(response);
     }
 
     @Operation(summary = "get product by ID")
@@ -42,7 +47,11 @@ public class ProductController {
     })
     @GetMapping("/{id}")
     public ResponseEntity<ProductResponse> getProductInfo(@PathVariable Long id){
-        return ResponseEntity.ok(productService.getProduct(id));
+        log.info("get product information request received productId={}",id);
+        ProductResponse response= productService.getProduct(id);
+        log.info("product retrived successfully");
+
+        return ResponseEntity.ok(response);
     }
     @Operation(summary = "get all products")
     @ApiResponses({
@@ -56,6 +65,7 @@ public class ProductController {
                                                                 @RequestParam(defaultValue = "productId") String sortBy,
                                                                 @RequestParam(defaultValue = "asc") String sortDir
                                                                 ){
+        log.info("get all products request received");
 
         return ResponseEntity.ok(
                 productService.getAllProducts(page,size,sortBy,sortDir)
@@ -70,17 +80,25 @@ public class ProductController {
     })
     @DeleteMapping("/delete/{id}")
     public String deleteProduct(@PathVariable Long id){
-        return productService.deleteProduct(id);
+       log.info("Delete product request received");
+       java.lang.String response =productService.deleteProduct(id);
+       log.info("product deleted successfully");
+       return response;
+
     }
 
     @Operation(summary = "update product")
     @PatchMapping("/update")
     public ResponseEntity<ProductResponse> updateProduct(@RequestParam Long id,@Valid @RequestBody ProductRequest productRequest){
-        return ResponseEntity.ok(productService.updateProduct(id,productRequest));
+        log.info("Update product request received");
+        ProductResponse response=productService.updateProduct(id,productRequest);
+        log.info("product updated successfully");
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping("/search")
     public List<Product> searchProducts(@RequestParam String keyword) {
+        log.info("search product request received");
         return productService.searchProducts(keyword);
     }
 

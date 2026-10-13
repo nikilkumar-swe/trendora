@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,7 @@ import java.security.Principal;
 @RestController
 @RequestMapping("/api/user")
 @Tag(name = "User APIs",description = "Operations related to user")
+@Slf4j
 public class UserController {
     private final UserServiceImpl userService;
     public UserController(UserServiceImpl userService){
@@ -31,7 +33,9 @@ public class UserController {
     })
     @PostMapping("/register")
     public ResponseEntity<UserRegisterResponse> register(@Valid @RequestBody UserRegisterRequest request){
-        return ResponseEntity.ok(userService.register(request));
+        log.info("user registration request received");
+        UserRegisterResponse registeredUser=userService.register(request);
+        return  ResponseEntity.ok(registeredUser);
     }
 
     @Operation(summary = "Login the user")
@@ -41,12 +45,17 @@ public class UserController {
     })
     @PostMapping("/login")
     public ResponseEntity<String> login(@Valid @RequestBody LoginRequest request){
-        return ResponseEntity.ok(userService.login(request));
+        log.info("User login request received");
+        String user=userService.login(request);
+        log.info("user logged in successfully");
+        return ResponseEntity.ok(user);
     }
 
     @GetMapping("/view/profile")
     public ResponseEntity<ViewProfile> viewProfile(Principal principal){
-        return ResponseEntity.ok(userService.viewProfile(principal));
+       log.info("view logged-in user profile request received");
+        ViewProfile profile=userService.viewProfile(principal);
+        return ResponseEntity.ok(profile);
     }
 
 }

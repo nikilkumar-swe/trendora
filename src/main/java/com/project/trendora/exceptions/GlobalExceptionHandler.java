@@ -45,6 +45,16 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(obj.getMessage());
     }
 
+    @ExceptionHandler(PaymentVerificationFailedException.class)
+    public ResponseEntity<String> handlePaymentVerificationFailed(
+            PaymentVerificationFailedException ex) {
+
+        log.warn("Payment verification failed: {}", ex.getMessage());
+
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(ex.getMessage());
+    }
 
 
 }

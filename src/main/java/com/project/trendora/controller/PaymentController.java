@@ -1,15 +1,17 @@
 package com.project.trendora.controller;
 
-
 import com.project.trendora.dto.PaymentResponseDTO;
 import com.project.trendora.dto.PaymentVerificationRequest;
+import com.project.trendora.exceptions.PaymentVerificationFailedException;
 import com.project.trendora.service.Impl.PaymentServiceImpl;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/payments")
+@Slf4j
 public class PaymentController {
 
     private final PaymentServiceImpl paymentService;
@@ -19,27 +21,28 @@ public class PaymentController {
     }
 
     @PostMapping("/create/{orderId}")
-    public PaymentResponseDTO createPayment(
-            @PathVariable Long orderId)
-            throws Exception {
-
-        return paymentService.createPayment(orderId);
+    public ResponseEntity<PaymentResponseDTO> createPayment(@PathVariable Long orderId) throws Exception {
+        log.info("payment create request received orderId={}",orderId);
+        com.project.trendora.dto.PaymentResponseDTO response =paymentService.createPayment(orderId);
+        log.info("Payment created successfully orderId={}",orderId);
+        return ResponseEntity.ok(response);
     }
 
     //verify payment
     @PostMapping("/verify")
-    public ResponseEntity<String> verifyPayment(
-            @Valid @RequestBody PaymentVerificationRequest request) {
+    public ResponseEntity<String> verifyPayment(@Valid @RequestBody PaymentVerificationRequest request) {
+
+        log.info("verify payment request received");
 
         boolean verified = paymentService.verifyPayment(request);
 
-        if (verified) {
+        if(!verified) {
+                log.warn("Payment verification failed | Invalid signature");
+                throw new PaymentVerificationFailedException(
+                        "Payment verification failed: Invalid payment signature"
+                );
+            }
+            log.info("Payment verified successfully");
             return ResponseEntity.ok("Payment verified successfully");
-        }
-
-        return ResponseEntity
-                .badRequest()
-                .body("Invalid payment signature");
     }
-
 }

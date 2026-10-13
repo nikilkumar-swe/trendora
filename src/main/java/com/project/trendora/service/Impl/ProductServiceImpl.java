@@ -26,9 +26,11 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
     private static final Logger logger= LoggerFactory.getLogger(ProductServiceImpl.class);
+
     @Override
     public ProductResponse addProduct(ProductRequest productRequest) {
         logger.info("creating product...");
+
         //check product already exist or not
         if(productRepository.existsByName(productRequest.getName())){
             logger.warn("Product already exist with given id");
