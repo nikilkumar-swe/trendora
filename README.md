@@ -1,698 +1,432 @@
 # Trendora 🛒
 
-**Trendora** is a full-featured e-commerce backend application built using **Java, Spring Boot, Spring Security, JPA/Hibernate, and MySQL**.
+> A production-style **e-commerce backend** built with **Java, Spring Boot, Spring Security (JWT), JPA/Hibernate and MySQL**, with **Razorpay payment integration**, an admin order lifecycle, and product recommendations.
 
-The application provides secure REST APIs for user authentication, product management, product search, cart management, order processing, and personalized product recommendations.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://trendora-i4wh.onrender.com/)
+[![Swagger](https://img.shields.io/badge/API-Swagger%20UI-85EA2D)](https://trendora-i4wh.onrender.com/swagger-ui/index.html)
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-6DB33F)
+![MySQL](https://img.shields.io/badge/MySQL-8-blue)
+![Razorpay](https://img.shields.io/badge/Payments-Razorpay-0C2451)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
 
-The project focuses on implementing **real-world backend architecture, secure authentication, database relationships, transactional operations, and scalable REST APIs**.
+---
+
+## 🌐 Live Demo
+
+| | Link |
+|---|---|
+| **Base URL** | https://trendora-i4wh.onrender.com/ |
+
+> ⏳ **Note:** Hosted on Render's free tier, so the first request after inactivity can take 30–60 seconds (cold start).
+
+---
+
+## 📌 Table of Contents
+
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Architecture](#-architecture)
+- [Entities & Relationships](#-entities--relationships)
+- [Authentication & Authorization](#-authentication--authorization)
+- [Order Lifecycle](#-order-lifecycle)
+- [Razorpay Payment Flow](#-razorpay-payment-flow)
+- [API Reference](#-api-reference)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Environment Variables](#-environment-variables)
+- [Run with Docker](#-run-with-docker)
+- [Deployment](#-deployment)
+- [Future Enhancements](#-future-enhancements)
+- [Author](#-author)
 
 ---
 
 ## 🚀 Features
 
 ### 🔐 Authentication & Authorization
-
-* User registration and login
-* JWT-based authentication
-* Secure password storage using BCrypt
-* Role-based authorization
-* Customer and Admin roles
-* Protected REST APIs
-* JWT validation through Spring Security filter
+- User registration and login
+- Stateless **JWT** authentication via a custom Spring Security filter
+- Passwords hashed with **BCrypt**
+- Role-based access: **CUSTOMER** and **ADMIN**
+- Protected REST endpoints
 
 ### 📦 Product Management
-
-* Create products
-* Get all products
-* Get product by ID
-* Update products
-* Delete products
-* Product search
-* Pagination
-* Sorting
-* Admin-only product management
-
----
-
-### 🤖 Product Recommendation System
-
-Trendora includes a **product recommendation system** that recommends products based on product-related data.
-
-The recommendation feature helps users discover products that may be relevant to their interests.
-
-Example flow:
-
-```text
-User
- │
- ▼
-User/Product Interaction
- │
- ▼
-Recommendation Logic
- │
- ▼
-Recommended Products
-```
-
-This makes the application more than a basic CRUD-based e-commerce application and introduces an element of **personalized product discovery**.
-
----
+- Create, read, update (PATCH) and delete products (admin-only for write operations)
+- Keyword **search**
+- **Pagination** and **sorting**
 
 ### 🛒 Cart Management
+- Add product to cart
+- Remove product from cart
+- View cart
 
-Users can manage their shopping cart through REST APIs.
+### 📋 Orders
+- Place an order from the cart
+- View order history
+- Cancel an order (soft cancel — status becomes `CANCELLED`, record is preserved)
+- Transactional order processing
 
-Features include:
+### 🛠️ Admin Order Management
+- Accept, process, ship and deliver orders through dedicated endpoints
 
-* Add product to cart
-* Remove product from cart
-* Update quantity
-* View cart
-  
-Example:
+### 💳 Payments (Razorpay)
+- Create a Razorpay payment order for a placed order
+- Verify the payment **signature** server-side before confirming payment
 
-```text
-User
- │
- ▼
-Select Product
- │
- ▼
-Add to Cart
- │
- ▼
-Update Quantity
- │
- ▼
-Place Order
-```
+### 🤖 Product Recommendations
+- Get recommended products based on a selected product
 
----
+### 🐳 Containerization
+- Application is **Dockerized**, so it runs the same way on any machine with a single command
 
-### 📋 Order Management
+### 📖 API Documentation
+- Full **Swagger / OpenAPI** documentation with JWT support
 
-Trendora provides complete order processing functionality.
-
-Features include:
-
-* Place order from cart
-* View user orders
-* Order status management
-* Cancel orders
-* Admin order acceptance
-* Order history preservation
-* Transactional order processing
-
-### Order Lifecycle
-
-```text
-                 ┌──────────────┐
-                 │   PENDING    │
-                 └──────┬───────┘
-                        │
-              ┌─────────┴─────────┐
-              ▼                   ▼
-        ┌───────────┐       ┌───────────┐
-        │ ACCEPTED  │       │ CANCELLED │
-        └─────┬─────┘       └───────────┘
-              │
-              ▼
-        ┌─────────────┐
-        │  PROCESSING │
-        └──────┬──────┘
-               │
-               ▼
-        ┌─────────────┐
-        │  COMPLETED  │
-        └─────────────┘
-```
-
-Cancelled orders are retained in the database with their status changed to `CANCELLED` instead of being physically deleted. This preserves the order history.
+### ⚠️ Validation & Error Handling
+- Bean validation on request DTOs
+- Global exception handling with consistent error responses
+- Handling of invalid users, products, carts and orders
 
 ---
 
-# 🏗️ Architecture
+## 🛠️ Tech Stack
 
-Trendora follows a layered Spring Boot architecture:
-
-```text
-                 Client
-                   │
-                   ▼
-             REST Controller
-                   │
-                   ▼
-              Service Layer
-                   │
-                   ▼
-             Repository Layer
-                   │
-                   ▼
-               MySQL DB
-```
-
-### Controller Layer
-
-Responsible for:
-
-* Receiving HTTP requests
-* Validating request data
-* Returning HTTP responses
-
-### Service Layer
-
-Contains the application's business logic, including:
-
-* Cart operations
-* Order processing
-* Product operations
-* Recommendation logic
-* User-related operations
-
-### Repository Layer
-
-Uses **Spring Data JPA** to communicate with the database.
-
-### Entity Layer
-
-Represents the application's database entities and their relationships.
-
-### DTO Layer
-
-DTOs are used for transferring request and response data without directly exposing database entities.
+| Technology | Purpose |
+|---|---|
+| Java | Language |
+| Spring Boot | Backend framework |
+| Spring Web | REST APIs |
+| Spring Security + JWT | Authentication & authorization |
+| Spring Data JPA / Hibernate | ORM & data access |
+| MySQL | Relational database |
+| Razorpay Java SDK | Payment gateway |
+| Swagger / OpenAPI | API docs & testing |
+| Maven | Build & dependency management |
+| Docker | Containerization |
+| Render | Cloud deployment |
 
 ---
 
-# 🧩 Main Entities
+## 🏗️ Architecture
+
+Layered architecture with clear separation of concerns:
 
 ```text
-User
- │
- ├──────────────► Cart
- │                  │
- │                  └──► CartItem ──► Product
- │
- └──────────────► Order
-                    │
-                    └──► OrderItem ──► Product
+Client
+  │
+  ▼
+Controller Layer   → handles HTTP requests, validation, responses
+  │
+  ▼
+Service Layer      → business logic (cart, orders, payments, recommendations)
+  │
+  ▼
+Repository Layer   → Spring Data JPA
+  │
+  ▼
+MySQL Database
 ```
 
-### User
-
-Stores customer/admin information and authentication-related data.
-
-### Product
-
-Represents products available in the store.
-
-### Cart
-
-Represents a user's shopping cart.
-
-### CartItem
-
-Represents a product and its quantity inside a cart.
-
-### Order
-
-Represents an order placed by a user.
-
-### OrderItem
-
-Represents individual products included in an order.
+DTOs are used for request/response data so database entities are never exposed directly.
 
 ---
 
-# 🛠️ Tech Stack
+## 🧩 Entities & Relationships
 
-| Technology        | Purpose                        |
-| ----------------- | ------------------------------ |
-| Java              | Programming Language           |
-| Spring Boot       | Backend Framework              |
-| Spring Web        | REST APIs                      |
-| Spring Security   | Authentication & Authorization |
-| JWT               | Stateless Authentication       |
-| Spring Data JPA   | Database Access                |
-| Hibernate         | ORM                            |
-| MySQL             | Relational Database            |
-| Maven             | Dependency Management          |
-| Swagger / OpenAPI | API Documentation              |
+```text
+User ──1:1── Cart ──1:N── CartItem ──N:1── Product
+  │
+  └──1:N── Order ──1:N── OrderItem ──N:1── Product
+```
+
+| Entity | Description |
+|---|---|
+| `User` | Customer/admin account and auth data |
+| `Product` | Product available in the store |
+| `Cart` / `CartItem` | A user's cart and its products with quantity |
+| `Order` / `OrderItem` | A placed order and its line items |
 
 ---
 
-# 🔐 JWT Authentication Flow
-
-Trendora uses JWT for stateless authentication.
+## 🔐 Authentication & Authorization
 
 ```text
-User
- │
- ▼
-Login
- │
- ▼
-Authentication
- │
- ▼
-JWT Token Generated
- │
- ▼
-Client Stores Token
- │
- ▼
-Request + JWT
- │
- ▼
-JwtAuthenticationFilter
- │
- ▼
-Token Validation
- │
- ▼
-Spring Security
- │
- ▼
-Protected API
+Login → Credentials verified → JWT generated → Client stores token
+   → Request with "Authorization: Bearer <token>"
+   → JwtAuthenticationFilter validates token
+   → SecurityContext set → Protected API reached
 ```
 
-The JWT is sent with subsequent requests:
-
-```text
-Authorization: Bearer <JWT_TOKEN>
-```
-
-The JWT authentication filter validates the token and establishes the authenticated user before the request reaches the protected controller.
+| Role | Permissions |
+|---|---|
+| **CUSTOMER** | Browse/search products, manage cart, place & cancel orders, pay, view recommendations |
+| **ADMIN** | Everything above + manage products + accept / process / ship / deliver orders |
 
 ---
 
-# 👥 Role-Based Authorization
+## 📋 Order Lifecycle
 
-Trendora supports different permissions for different users.
+```text
+                    ┌─────────┐
+                    │ PENDING │
+                    └────┬────┘
+              ┌──────────┴──────────┐
+              ▼                     ▼
+        ┌──────────┐          ┌───────────┐
+        │ ACCEPTED │          │ CANCELLED │
+        └────┬─────┘          └───────────┘
+             ▼
+        ┌────────────┐
+        │ PROCESSING │
+        └────┬───────┘
+             ▼
+        ┌─────────┐
+        │ SHIPPED │
+        └────┬────┘
+             ▼
+        ┌───────────┐
+        │ DELIVERED │
+        └───────────┘
+```
 
-### Customer
+Cancelled orders stay in the database with status `CANCELLED` to preserve order history.
 
-Customers can:
+---
 
-* Browse products
-* View product details
-* Manage their cart
-* Place orders
-* View their orders
-* Cancel eligible orders
-* Get product recommendations
+## 💳 Razorpay Payment Flow
 
-### Admin
+```text
+1. Customer places order            POST /api/orders/place/{userId}
+2. Backend creates Razorpay order   POST /api/payments/create/{orderId}
+3. Client opens Razorpay Checkout using the returned order details
+4. Customer pays
+5. Client sends payment details     POST /api/payments/verify
+6. Backend verifies the Razorpay signature (HMAC-SHA256) → payment confirmed
+```
 
-Admins can additionally:
+The Razorpay key secret never leaves the server, and payment is only trusted after signature verification.
 
-* Create products
-* Update products
-* Delete products
-* Manage orders
-* Accept customer orders
-* Update order status
+---
+
+## 🔌 API Reference
+
+### 👤 User APIs
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/user/register` | Register a user |
+| POST | `/api/user/login` | Login and receive JWT |
+| GET | `/api/user/view/profile` | View logged-in user's profile |
+
+### 📦 Product APIs
+| Method | Endpoint | Description | Access |
+|---|---|---|---|
+| GET | `/api/product/{id}` | Get product by ID | Authenticated |
+| GET | `/api/product/get/products` | Get all products (pagination + sorting) | Authenticated |
+| GET | `/api/product/search` | Search products | Authenticated |
+| POST | `/api/product/add` | Add a product | Admin |
+| PATCH | `/api/product/update` | Update a product | Admin |
+| DELETE | `/api/product/delete/{id}` | Delete a product | Admin |
 
 Example:
-
-```text
-                JWT Authentication
-                       │
-                       ▼
-              ┌─────────────────┐
-              │ Authenticated   │
-              │     User        │
-              └────────┬────────┘
-                       │
-              ┌────────┴────────┐
-              ▼                 ▼
-           CUSTOMER           ADMIN
-              │                 │
-              ▼                 ▼
-        Customer APIs       Admin APIs
-```
-
----
-
-# 🔎 Product Search & Discovery
-
-Users can search the product catalog using keywords.
-
-```text
-Search Keyword
-      │
-      ▼
-Product Search API
-      │
-      ▼
-Database Query
-      │
-      ▼
-Matching Products
-```
-
-Search functionality makes it easier for users to discover products in a large catalog.
-
----
-
-# 🤖 Recommendation System
-
-Trendora also contains a product recommendation feature.
-
-The recommendation system analyzes available product/user-related information and generates relevant product recommendations.
-
-```text
-User
- │
- ▼
-Relevant Data
- │
- ▼
-Recommendation Logic
- │
- ▼
-Recommended Products
-```
-
-This feature demonstrates how recommendation functionality can be integrated into a traditional Spring Boot e-commerce backend.
-
----
-
-# 📄 Pagination & Sorting
-
-Product APIs support pagination and sorting.
-
-Example:
-
 ```text
 GET /api/product/get/products?page=0&size=10&sortBy=price&direction=asc
 ```
 
-Benefits:
+### 🛒 Cart Management
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/cart/add` | Add product to cart |
+| POST | `/api/cart/remove` | Remove product from cart |
+| GET | `/api/cart/view/{userId}` | View user's cart |
 
-* Avoids loading the complete product catalog
-* Improves API performance
-* Provides better frontend experience
-* Supports scalable product listing
+### 📋 Order Management
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/orders/place/{userId}` | Place a new order |
+| GET | `/api/orders/view/{userId}` | View user's orders |
+| PUT | `/api/orders/cancel/{orderId}` | Cancel an order |
 
----
+### 🛠️ Admin Order Management
+| Method | Endpoint | Description |
+|---|---|---|
+| PUT | `/api/admin/orders/accept/{orderId}` | Accept order |
+| PUT | `/api/admin/orders/{orderId}/process` | Mark order as processing |
+| PUT | `/api/admin/orders/{orderId}/ship` | Ship order |
+| PUT | `/api/admin/orders/{orderId}/deliver` | Mark order as delivered |
 
-# ⚠️ Validation & Exception Handling
+### 💳 Payment Management
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/payments/create/{orderId}` | Create Razorpay payment order |
+| POST | `/api/payments/verify` | Verify Razorpay payment signature |
 
-The application implements:
-
-* Request validation
-* DTO validation
-* Global exception handling
-* Custom error responses
-* Handling of invalid product IDs
-* Handling of invalid users
-* Cart validation
-* Order validation
-
-A centralized exception-handling approach keeps API responses consistent.
-
----
-
-# 💾 Database Design
-
-Trendora uses **MySQL** with JPA/Hibernate.
-
-Major tables/entities include:
-
-```text
-users
-products
-cart
-cart_items
-orders
-order_items
-```
-
-Entity relationships are managed using JPA mappings.
-
-For example:
-
-```text
-User
- ├── 1 : 1 ── Cart
- │
- └── 1 : N ── Orders
-
-Cart
- └── 1 : N ── CartItems
-
-Order
- └── 1 : N ── OrderItems
-
-CartItem
- └── N : 1 ── Product
-
-OrderItem
- └── N : 1 ── Product
-```
+### 🤖 Product Recommendations
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/recommendations/product/{productId}` | Get recommendations for a product |
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 src/
 └── main/
-    ├── java/
-    │   └── com.project.trendora/
-    │       ├── controller/
-    │       ├── service/
-    │       ├── repository/
-    │       ├── entity/
-    │       ├── dto/
-    │       ├── exception/
-    │       ├── security/
-    │       └── config/
-    │
+    ├── java/com/project/trendora/
+    │   ├── controller/
+    │   ├── service/
+    │   ├── repository/
+    │   ├── entity/
+    │   ├── dto/
+    │   ├── exception/
+    │   ├── security/
+    │   └── config/
     └── resources/
         └── application.properties
 ```
 
 ---
 
-# 🔌 API Modules
+## ▶️ Getting Started
 
-## Authentication
-
-```text
-POST /api/user/register
-POST /api/user/login
-```
-
-## Products
-
-```text
-GET    /api/product/{id}
-GET    /api/product/get/products
-POST   /api/product/add
-PUT    /api/product/update/{id}
-DELETE /api/product/delete/{id}
-GET    /api/product/search
-```
-
-## Cart
-
-```text
-POST   /api/cart/add
-DELETE /api/cart/remove
-GET    /api/cart/view/{userId}
-```
-
-## Orders
-
-```text
-POST /api/orders/place
-GET  /api/orders/view/{userId}
-PUT  /api/orders/cancel/{orderId}
-```
-
-## Recommendations
-
-```text
-GET /api/recommendations/product/{productId}
-```
-
----
-
-# ▶️ Running the Project
+### Prerequisites
+- Java 17+
+- Maven
+- MySQL 8+
+- A Razorpay account (test mode keys work fine)
 
 ### 1. Clone the repository
-
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/nikilkumar-swe/trendora.git
+cd <YOUR_REPO_NAME>
 ```
 
 ### 2. Create the database
-
 ```sql
 CREATE DATABASE trendora;
 ```
 
-### 3. Configure application properties
-
-Update:
-
-```text
-src/main/resources/application.properties
-```
-
-Example:
-
+### 3. Configure `application.properties`
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/trendora
-spring.datasource.username=YOUR_USERNAME
-spring.datasource.password=YOUR_PASSWORD
-
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-Configure your JWT secret and other sensitive values using environment variables.
+### 4. Set environment variables
+See [Environment Variables](#-environment-variables).
 
-### 4. Build the project
-
+### 5. Build and run
 ```bash
 mvn clean install
-```
-
-### 5. Run the application
-
-```bash
 mvn spring-boot:run
 ```
 
-The application will run on:
+App runs at `http://localhost:8080
+
+---
+
+## 🔑 Environment Variables
+
+Never commit secrets. Configure these via environment variables (names should match your `application.properties`):
+
+| Variable | Description |
+|---|---|
+| `DB_USERNAME` | MySQL username |
+| `DB_PASSWORD` | MySQL password |
+| `JWT_SECRET` | Secret used to sign JWT tokens |
+| `RAZORPAY_KEY_ID` | Razorpay key ID |
+| `RAZORPAY_KEY_SECRET` | Razorpay key secret |
+
+---
+
+## 🐳 Run with Docker
+
+Trendora is containerized with **Docker**, so you can run it without installing Java or Maven locally.
+
+### Build the image
+```bash
+docker build -t trendora .
+```
+
+### Run the container
+```bash
+docker run -p 8080:8080 \
+  -e DB_USERNAME=<your_db_username> \
+  -e DB_PASSWORD=<your_db_password> \
+  -e JWT_SECRET=<your_jwt_secret> \
+  -e RAZORPAY_KEY_ID=<your_key_id> \
+  -e RAZORPAY_KEY_SECRET=<your_key_secret> \
+  trendora
+```
+
+> The database URL must point to a MySQL instance reachable from the container (for example `host.docker.internal` for a MySQL running on your machine, or a separate MySQL container).
+
+App will be available at `http://localhost:8080`.
+
+---
+
+## ☁️ Deployment
+
+The application is deployed on **Render**.
+
+- Live: https://trendora-i4wh.onrender.com/
+- Secrets and DB credentials are configured through Render environment variables.
+
+---
+
+## 🧪 Typical Flow
 
 ```text
-http://localhost:8080
+Register → Login → Get JWT → Browse / Search products → Get recommendations
+→ Add to cart → View cart → Place order (PENDING)
+→ Create Razorpay payment → Pay → Verify payment
+→ Admin: Accept → Process → Ship → Deliver
 ```
 
 ---
 
-# 📖 API Documentation
+## 🎯 Key Concepts Demonstrated
 
-Swagger/OpenAPI is integrated into the project for API documentation and testing.
-
-After starting the application, open the configured Swagger UI to:
-
-* View available endpoints
-* Check request/response structures
-* Test APIs
-* Provide JWT authentication
-* Explore API documentation
-
----
-
-# 🧪 Typical User Flow
-
-```text
-Register
-   │
-   ▼
-Login
-   │
-   ▼
-Receive JWT
-   │
-   ▼
-Browse Products
-   │
-   ├────► Search Products
-   │
-   └────► Get Recommendations
-             │
-             ▼
-        Add to Cart
-             │
-             ▼
-        View Cart
-             │
-             ▼
-        Place Order
-             │
-             ▼
-          PENDING
-             │
-             ▼
-       Admin Accepts
-             │
-             ▼
-          ACCEPTED
-             │
-             ▼
-        Processing
-             │
-             ▼
-         Completed
-```
+- REST API design with Spring Boot
+- JWT authentication & role-based authorization with Spring Security
+- BCrypt password hashing
+- JPA/Hibernate entity relationships (1:1, 1:N, N:1)
+- DTO pattern, service layer, repository pattern
+- Transactional order processing
+- Third-party payment gateway integration (Razorpay) with signature verification
+- Pagination, sorting, search
+- Bean validation and global exception handling
+- Swagger/OpenAPI documentation
+- Containerization with Docker
+- Cloud deployment on Render
 
 ---
 
-# 🎯 Key Backend Concepts Demonstrated
+## 🔮 Future Enhancements
 
-This project demonstrates practical knowledge of:
-
-* Java
-* Spring Boot
-* REST API development
-* Spring Security
-* JWT authentication
-* Role-based authorization
-* BCrypt password hashing
-* Spring Data JPA
-* Hibernate ORM
-* MySQL
-* Entity relationships
-* DTO pattern
-* Service-layer architecture
-* Repository pattern
-* Transaction management
-* Product search
-* Product recommendation systems
-* Pagination
-* Sorting
-* Bean validation
-* Global exception handling
-* Swagger/OpenAPI
-* Secure API design
+- Wishlist
+- Product reviews and ratings
+- Advanced filtering
+- Inventory/stock management
+- Email notifications
+- Redis caching
+- Unit & integration tests
+- ML-based recommendations
 
 ---
 
-# 🔮 Future Enhancements
+## 👨‍💻 Author
 
-Potential future improvements:
+**Nikhil Kumar Rana** — Java Backend Developer
 
-* Payment gateway integration
-* Wishlist
-* Product reviews and ratings
-* Advanced product filtering
-* Inventory management
-* Email notifications
-* Order tracking
-* Redis caching
-* Docker containerization
-* Automated unit and integration testing
-* More advanced ML-based recommendations
+**Skills:** Java • Spring Boot • Spring Security • JWT • JPA • Hibernate • MySQL • REST APIs
+
+[![GitHub](https://img.shields.io/badge/GitHub-nikilkumar--swe-181717?logo=github)](https://github.com/nikilkumar-swe)
+[![Email](https://img.shields.io/badge/Email-nikil.kumar.swe%40gmail.com-D14836?logo=gmail&logoColor=white)](mailto:nikil.kumar.swe@gmail.com)
 
 ---
 
-# 👨‍💻 Author
-
-**Nikhil Kumar Rana**
-
-Java Backend Developer 
-
-**Technologies:** Java • Spring Boot • Spring Security • JWT • JPA • Hibernate • MySQL • REST APIs
-
----
-
-## ⭐ Project Objective
-
-The objective of Trendora is to build a production-style e-commerce backend while applying real-world backend engineering concepts such as **secure authentication, role-based authorization, relational database design, transactional order processing, product discovery, and recommendation systems**.
-
-The project combines traditional e-commerce functionality with modern backend practices to create a scalable and maintainable application.
+⭐ If you found this project useful, consider giving it a star!
